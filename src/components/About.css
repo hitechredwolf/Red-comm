@@ -1,0 +1,633 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Base Setup */
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to right, #cc0000, #ff4d4d);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    animation: fadeSlideDown 1s ease-out;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.banner p {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 400;
+    animation: pulseGlow 2s infinite;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 60px;
+    padding: 20px;
+    animation: fadeSlideUp 1s ease-out;
+}
+
+.white-bg {
+    background-color: #fff5f5;
+    border-left: 5px solid #cc0000;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #cc0000;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #cc0000;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    animation: growLine 1s ease-in-out;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.card:hover {
+    border-color: #cc0000;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(255, 0, 0, 0.2);
+    background: linear-gradient(to top right, #ffeaea, #ffffff);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* List Styling */
+.feature-list,
+.vision-list,
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.feature-list li,
+.vision-list li,
+.benefits-list li {
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    background: #fff;
+    border-left: 5px solid #cc0000;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    position: relative;
+}
+
+.feature-list li:hover,
+.vision-list li:hover,
+.benefits-list li:hover {
+    background-color: #ffeaea;
+    transform: scale(1.02);
+    font-weight: 600;
+    border-left-color: #ff1a1a;
+}
+
+/* Icon Style in Headings */
+.section-title svg {
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #cc0000;
+}
+
+/* Closing Text */
+.closing-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    color: #444;
+    animation: fadeIn 1s ease-in;
+    font-weight: 400;
+}
+
+/* Animations */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60px;
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff1a1a;
+    }
+
+    50% {
+        text-shadow: 0 0 15px #fff, 0 0 25px #ff4d4d;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff1a1a;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .description,
+    .closing-text {
+        font-size: 1rem;
+    }
+
+    .feature-list li,
+    .vision-list li,
+    .benefits-list li {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce-in {
+    animation: bounceIn 1s ease;
+}
+
+.banner-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rw-mission-vision {
+    background-color: #feeeee;
+    color: #030303;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.rw-split-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rw-box {
+    flex: 1 1 48%;
+    /* background: linear-gradient(to top right, #1c1c1c, #8a0000); */
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rw-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+}
+
+.rw-heading {
+    color: #ff3d3d;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-left: 6px solid #ff3d3d;
+    padding-left: 15px;
+}
+
+.rw-subheading {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ff6b6b;
+}
+
+.rw-box p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.rw-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rw-box ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.rw-box ul li::before {
+    content: '➤';
+    position: absolute;
+    left: 0;
+    color: #ff3333;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rw-split-container {
+        flex-direction: column;
+    }
+
+    .rw-box {
+        flex: 1 1 100%;
+        padding: 30px;
+    }
+
+    .rw-heading {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* FOURTH  */
+
+.brand-attributes-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.brand-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.brand-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.brand-card {
+    width: 250px;
+    text-align: left;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.brand-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.brand-card p {
+    font-size: 15px;
+    color: #555;
+    margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === Event Section === */
+
+.event-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.event-section .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-card h3 {
+    font-size: 1.1rem;
+    padding: 15px 10px;
+    color: #444;
+}
+
+/* === Modal Styles === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #cc0000;
+}
+
+.modal-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* === Image Grid in Modal === */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    height: 120px;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 15px;
+    }
+
+    .event-section .section-title {
+        font-size: 1.5rem;
+    }
+
+    .image-grid img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-card h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.2rem;
+    }
+}

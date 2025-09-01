@@ -1,0 +1,351 @@
+:root {
+    --bg-header: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
+    --text-color: white;
+    --icon-color: white;
+    --cart-bg: #fff;
+    --cart-text: #333;
+    --search-bg: rgba(30, 30, 30, 0.95);
+}
+
+body.dark-mode {
+    --bg-header: linear-gradient(to right, #0d1117, #161b22, #21262d);
+    --text-color: #e6edf3;
+    --icon-color: #f5f5f5;
+    --cart-bg: #1c1c1c;
+    --cart-text: #ddd;
+    --search-bg: rgba(10, 10, 10, 0.95);
+}
+
+
+
+/* === Header === */
+.nav-header {
+    background: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
+    padding: 0.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 80px;
+}
+
+/* === Desktop Menu === */
+.nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #f1f1f1;
+}
+
+/* === Icons === */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.icon {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-wrapper {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: pink;
+    color: black;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* === Mobile Menu Button === */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* === Mobile Nav === */
+.mobile-nav {
+    background: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
+    padding: 1rem;
+    animation: slideDown 0.3s ease;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mobile-nav a:hover {
+    color: #f1f1f1;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Overlay === */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* === Cart Drawer === */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+}
+
+.continue-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    background: #444;
+}
+
+/* === Responsive Breakpoint === */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        /* hide desktop menu */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* show hamburger */
+    }
+}
+
+
+/* search bar  */
+
+/* === Fullscreen Search Overlay === */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    animation: fadeIn 0.3s ease;
+}
+
+.search-close {
+    position: absolute;
+    bottom: 30.5rem;
+    left: 65px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.search-error {
+    color: red;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* dark mode  */
+
+
+.nav-header {
+    background: var(--bg-header);
+}
+
+.nav-item a {
+    color: var(--text-color);
+}
+
+.icon {
+    color: var(--icon-color);
+}
+
+.cart-drawer {
+    background: var(--cart-bg);
+    color: var(--cart-text);
+}
+
+.search-overlay {
+    background: var(--search-bg);
+}
+
+
+.dark-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dark-toggle:hover {
+    transform: scale(1.1);
+}

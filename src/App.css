@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+/* App.css */
+.stats-section {
+  background: linear-gradient(to right, #8b0000, #ffffff, #000000);
+  padding: 60px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stats-card {
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stats-card:hover {
+  transform: translateY(-5px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stats-number {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.stats-label {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+
+/* journey  */
+
+
+.timeline {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(to left, #000000, #d9dfdd, #8a0000);
+}
+
+.timeline__event {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 6px;
+  align-self: center;
+  width: 50vw;
+}
+
+.timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.timeline__event__title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #8a0000;
+
+}
+
+.timeline__event__content {
+  padding: 20px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  background: #fff;
+  width: calc(40vw - 84px);
+  border-radius: 6px;
+}
+
+.timeline__event__date {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #000000, #8a0000);
+  display: flex;
+  font-family: sans-serif;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  white-space: nowrap;
+  padding: 0 20px;
+  border-radius: 6px 0 0 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: linear-gradient(to right, #000000, #8a0000);
+  padding: 40px;
+  align-self: center;
+  margin: 0 20px;
+  background: linear-gradient(to right, #000000, #8a0000);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline__event__description {
+  flex-basis: 100%;
+  font-family: sans-serif;
 }
