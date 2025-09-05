@@ -5,6 +5,12 @@ import About from "./components/About";
 // import Tcops from "./components/Tcops";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
+// Product Pages
+import Television from "./components/Television";
+import Speaker from "./components/Speaker";
+import AirConditioner from "./components/AirConditioner";
+import WashingMachines from "./components/WashingMachines";
+
 // import Speaker from "./components/Speaker";
 // import Led from "./components/Led";
 import Home from "./components/Home";
@@ -20,6 +26,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/television" element={<Television />} />
+        <Route path="/speaker" element={<Speaker />} />
+        <Route path="/washing-machines" element={<WashingMachines />} />
+        <Route path="/air-conditioner" element={<AirConditioner />} />
         {/* <Route path="/Tcops" element={<Tcops />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />

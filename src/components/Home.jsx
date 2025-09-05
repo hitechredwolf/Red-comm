@@ -9,7 +9,8 @@ import webbanner from "./images/Iphone Final Banner.jpg";
 import inch from "./images/98inch.jpeg"
 import ChatBot from "./ChatBot";
 import front from "./images/frontspeaker.jpeg"
-
+import Category from "./Category";
+import today from "./images/ordertoday.jpeg"
 function Home() {
     return (
 
@@ -45,11 +46,15 @@ function Home() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
-
+                <Category />
                 {/* counter  */}
 
-                <ChatBot />
+<div>
+<img src={today} className="d-block w-100" alt="..." />
+</div>
 
+
+                <ChatBot />
                 <a
                     href="https://wa.me/9214309236"
                     target="_blank"
