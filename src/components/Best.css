@@ -1,0 +1,120 @@
+.apple-section {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-left: 6rem;
+    gap: 10rem;
+}
+
+.apple-header {
+    margin-bottom: 20px;
+    max-width: 30rem;
+    position: relative;
+    top: 5rem;
+}
+
+.apple-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.apple-header p {
+    color: #555;
+    margin: 8px 0;
+    font-family: robotoRegular, sans-serif;
+    font-size: 14px;
+    max-width: 14rem;
+}
+
+.view-all {
+    background: black;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* === Desktop (horizontal scroll like your screenshot) === */
+.apple-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.apple-cards::-webkit-scrollbar {
+    display: none;
+    /* hide scrollbar */
+}
+
+.apple-card {
+    min-width: 250px;
+    max-width: 280px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.apple-card:hover {
+    transform: translateY(-5px);
+}
+
+.apple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.apple-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+/* Price Row */
+.price-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.discount {
+    color: red;
+    font-weight: bold;
+}
+
+.best {
+    color: black;
+}
+
+/* === Mobile View (grid style 1 card per row) === */
+@media (max-width: 768px) {
+    .apple-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: visible;
+    }
+
+    .apple-card {
+        min-width: auto;
+        max-width: 100%;
+    }
+}

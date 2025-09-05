@@ -4,13 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import './Home.css';
-import bannerAi from "./images/Banner 1.jpg";
+import Tagline from "./images/tagline.jpeg";
 import webbanner from "./images/Iphone Final Banner.jpg";
 import inch from "./images/98inch.jpeg"
 import ChatBot from "./ChatBot";
 import front from "./images/frontspeaker.jpeg"
 import Category from "./Category";
 import today from "./images/ordertoday.jpeg"
+import Best from "./Best"
 function Home() {
     return (
 
@@ -25,7 +26,7 @@ function Home() {
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src={bannerAi} className="d-block w-100" alt="..." />
+                            <img src={Tagline} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
                             <img src={inch} className="d-block w-100" alt="..." />
@@ -48,10 +49,11 @@ function Home() {
                 </div>
                 <Category />
                 {/* counter  */}
+                <Best/>
 
-<div>
-<img src={today} className="d-block w-100" alt="..." />
-</div>
+                <div>
+                    <img src={today} className="d-block w-100" alt="..." />
+                </div>
 
 
                 <ChatBot />
