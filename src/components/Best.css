@@ -105,16 +105,72 @@
     color: black;
 }
 
-/* === Mobile View (grid style 1 card per row) === */
+/* === Mobile View (grid style) === */
 @media (max-width: 768px) {
+    .apple-section {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 2rem;
+        padding: 10px;
+    }
+
+    .apple-header {
+        text-align: center;
+        position: static;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .apple-header h2 {
+        font-size: 20px;
+    }
+
+    .apple-header p {
+        font-size: 13px;
+        max-width: 100%;
+        margin: 0 auto 10px auto;
+    }
+
+    .view-all {
+        padding: 6px 14px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+
     .apple-cards {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 16px;
         overflow: visible;
     }
 
     .apple-card {
-        min-width: auto;
+        width: 100%;
         max-width: 100%;
+        padding: 12px;
+    }
+
+    .apple-card img {
+        height: auto;
+        max-height: 180px;
+    }
+
+    .apple-card h3 {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .price-row {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .mrp,
+    .discount {
+        font-size: 13px;
     }
 }

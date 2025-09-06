@@ -7,7 +7,9 @@ import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 // Product Pages
 import Television from "./components/Television";
+import ProductDetail from "./components/ProductDetail";
 import Speaker from "./components/Speaker";
+import SpeakertDetails from "./components/SpeakerDetails";
 import AirConditioner from "./components/AirConditioner";
 import WashingMachines from "./components/WashingMachines";
 
@@ -27,7 +29,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/television" element={<Television />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/speaker" element={<Speaker />} />
+        <Route path="/product/:id" element={<SpeakertDetails />} />
         <Route path="/washing-machines" element={<WashingMachines />} />
         <Route path="/air-conditioner" element={<AirConditioner />} />
         {/* <Route path="/Tcops" element={<Tcops />} /> */}

@@ -5,10 +5,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import './Home.css';
 import Tagline from "./images/tagline.jpeg";
-import webbanner from "./images/Iphone Final Banner.jpg";
-import inch from "./images/98inch.jpeg"
+import smtspkr from "./images/smtspkr.jpeg";
+import smt32 from "./images/smt32.jpeg"
 import ChatBot from "./ChatBot";
-import front from "./images/frontspeaker.jpeg"
+// import front from "./images/frontspeaker.jpeg"
 import Category from "./Category";
 import today from "./images/ordertoday.jpeg"
 import Best from "./Best"
@@ -18,9 +18,6 @@ function Home() {
         <div className="App">
 
             <header className="App-header">
-
-
-
                 {/* home page code */}
 
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -29,13 +26,10 @@ function Home() {
                             <img src={Tagline} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src={inch} className="d-block w-100" alt="..." />
+                            <img src={smt32} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src={webbanner} className="d-block w-100" alt="..." />
-                        </div>
-                        <div className="carousel-item">
-                            <img src={front} className="d-block w-100" alt="..." />
+                            <img src={smtspkr} className="d-block w-100" alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
