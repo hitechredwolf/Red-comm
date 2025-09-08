@@ -12,14 +12,14 @@ const ProductDetail = () => {
     const [zoomVisible, setZoomVisible] = useState(false);
     const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
 
-    if (!state) {
-        return (
-            <div className="product-detail">
-                <h2>No product selected</h2>
-                <button onClick={() => navigate("/")}>Go Back</button>
-            </div>
-        );
-    }
+    // if (!state) {
+    //     return (
+    //         <div className="product-detail">
+    //             <h2>No product selected</h2>
+    //             <button onClick={() => navigate("/")}>Go Back</button>
+    //         </div>
+    //     );
+    // }
 
     const {
         name,

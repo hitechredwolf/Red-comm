@@ -132,7 +132,7 @@ function Speaker() {
                   </button>
                   <button
                     className="btn details-btn"
-                    onClick={() => navigate(`/product/${product.id}`)}
+                    onClick={() => navigate(`/speaker/${product.id}`)}
                   >
                     View Details
                   </button>
