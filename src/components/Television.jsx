@@ -1,378 +1,110 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Television.css";
-
-const televisions = [
-  {
-    id: 1,
-    name: "Cellecor Smart TV E-32X (32 Inch)",
-    oldPrice: 15999,
-    newPrice: 10140,
-    discount: "22%",
-    size: "32 Inch",
-    img: "https://cellecor.com/cdn/shop/files/E32N_01copy.png?v=1686556768",
-    soldOut: true,
-    resolution: "HD Ready",
-    description:
-      "A 32-inch HD Ready Smart TV with vibrant picture quality, HDMI support, and smart apps.",
-  },
-  {
-    id: 2,
-    name: "Cellecor Smart TV E-40V (40 Inch)",
-    oldPrice: 25999,
-    newPrice: 11700,
-    discount: "31%",
-    size: "40 Inch",
-    img: "https://cellecor.com/cdn/shop/files/E32N_01copy.png?v=1686556768",
-    soldOut: false,
-    resolution: "1080p Full HD",
-    description:
-      "40-inch Full HD Smart TV with Netflix, YouTube, Prime Video, and Hotstar built-in.",
-  },
-  {
-    id: 3,
-    name: "Cellecor Smart TV E-32X (32 Inch)",
-    oldPrice: 15999,
-    newPrice: 12140,
-    discount: "22%",
-    size: "32 Inch",
-    img: "https://cellecor.com/cdn/shop/files/E32N_01copy.png?v=1686556768",
-    soldOut: true,
-    resolution: "HD Ready",
-    description:
-      "A 32-inch HD Ready Smart TV with vibrant picture quality, HDMI support, and smart apps.",
-  },
-  {
-    id: 4,
-    name: "Cellecor Smart TV E-40V (40 Inch)",
-    oldPrice: 25999,
-    newPrice: 15700,
-    discount: "31%",
-    size: "40 Inch",
-    img: "https://cellecor.com/cdn/shop/files/E32N_01copy.png?v=1686556768",
-    soldOut: false,
-    resolution: "1080p Full HD",
-    description:
-      "40-inch Full HD Smart TV with Netflix, YouTube, Prime Video, and Hotstar built-in.",
-  },
-  {
-    id: 5,
-    name: "Cellecor Smart TV E-40V (40 Inch)",
-    oldPrice: 25999,
-    newPrice: 16700,
-    discount: "31%",
-    size: "40 Inch",
-    img: "https://cellecor.com/cdn/shop/files/E32N_01copy.png?v=1686556768",
-    soldOut: false,
-    resolution: "1080p Full HD",
-    description:
-      "40-inch Full HD Smart TV with Netflix, YouTube, Prime Video, and Hotstar built-in.",
-  },
-  // ... baaki TVs same as tumhare code me hai
-];
+import { televisions } from "../components/data";
 
 const Television = () => {
-  const [price, setPrice] = useState(100000);
-  const [availability, setAvailability] = useState("all");
-  const [sortBy, setSortBy] = useState("featured");
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedImg, setSelectedImg] = useState(null);
-  const [activeTab, setActiveTab] = useState("description");
-  const [zoomVisible, setZoomVisible] = useState(false);
-  const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
+  const [showFilters, setShowFilters] = useState(false);
+  const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("Default");
+  const [category, setCategory] = useState("All");
 
-  // ✅ CLEAR ALL button ka function
-  const clearAllFilters = () => {
-    setPrice(100000);
-    setAvailability("all");
-    setSortBy("featured");
-  };
+  // ✅ Filtering Logic
+  const filteredTVs = televisions
+    .filter((tv) =>
+      tv.name.toLowerCase().includes(search.toLowerCase())
+    )
+    .filter((tv) =>
+      category === "All" ? true : tv.size === category
+    )
+    .sort((a, b) => {
+      if (sort === "Price: Low to High") return a.newPrice - b.newPrice;
+      if (sort === "Price: High to Low") return b.newPrice - a.newPrice;
+      if (sort === "Newest") return b.id - a.id; // assuming id represents newest
+      return 0; // Default
+    });
 
-  // filter logic
-  let filteredTVs = televisions.filter((tv) => {
-    const withinPrice = tv.newPrice <= price;
-    const availabilityMatch =
-      availability === "all"
-        ? true
-        : availability === "inStock"
-          ? !tv.soldOut
-          : tv.soldOut;
-    return withinPrice && availabilityMatch && !tv.soldOut; // ✅ sirf in-stock dikhao
-  });
-
-  // sorting logic
-  if (sortBy === "priceLowHigh") {
-    filteredTVs = filteredTVs.sort((a, b) => a.newPrice - b.newPrice);
-  } else if (sortBy === "priceHighLow") {
-    filteredTVs = filteredTVs.sort((a, b) => b.newPrice - a.newPrice);
-  } else if (sortBy === "nameAZ") {
-    filteredTVs = filteredTVs.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  // zoom handlers
-  const handleMouseMove = (e) => {
-    const { left, top, width, height } = e.target.getBoundingClientRect();
-    const x = ((e.pageX - left - window.scrollX) / width) * 100;
-    const y = ((e.pageY - top - window.scrollY) / height) * 100;
-    setZoomPosition({ x, y });
-    setZoomVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setZoomVisible(false);
-  };
-
-  if (selectedProduct) {
-    const { name, img, newPrice, oldPrice, resolution, description, discount } =
-      selectedProduct;
-
-    const images = [
-      img,
-      "https://images.samsung.com/is/image/samsung/p6pim/in/ua43f5550fuxxl/gallery/in-fhd-f5500-548422-ua43f5550fuxxl-546515618?$684_547_PNG$",
-      "https://cellecor.com/cdn/shop/files/E40V_02.png?v=1686919758",
-      "https://cellecor.com/cdn/shop/files/E40V_05.png?v=1686919758",
-      "https://cellecor.com/cdn/shop/files/E40V_06-1.png?v=1686919758",
-    ];
-
-    return (
-      <div className="product-detail-page">
-        <button
-          className="back-btn"
-          onClick={() => {
-            setSelectedProduct(null);
-            setSelectedImg(null);
-            setActiveTab("description");
-          }}
-        >
-          ← Back
-        </button>
-
-        <div className="detail-container">
-          {/* Left: Image Gallery */}
-          <div className="detail-img">
-            <div className="gallery">
-              <div className="thumbnail-list">
-                {images.map((i, index) => (
-                  <img
-                    key={index}
-                    src={i}
-                    alt="thumb"
-                    className={`thumbnail ${selectedImg === i ? "active" : ""}`}
-                    onClick={() => setSelectedImg(i)}
-                  />
-                ))}
-              </div>
-              <div
-                className="main-image"
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-              >
-                <img src={selectedImg || img} alt={name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Product Info */}
-          <div className="detail-info">
-            <h2>{name}</h2>
-            <div className="rating">⭐⭐⭐⭐⭐ (2 Reviews)</div>
-            <p className="stock">✔ In stock and ready to ship</p>
-
-            <div className="price-box">
-              <p className="old-price">Rs. {oldPrice}</p>
-              <p className="new-price">Rs. {newPrice}</p>
-              <span className="discount">Save {discount}</span>
-            </div>
-
-            <p className="resolution">{resolution}</p>
-
-            <div className="detail-buttons">
-              <input type="number" min="1" defaultValue="1" className="qty" />
-              <button className="cart-btn">Add to Cart</button>
-              <button className="buy-btn">Buy Now</button>
-            </div>
-
-            <div className="extra-info">
-              <p>🚚 Free Shipping</p>
-              <p>🔒 Secure Payment</p>
-              <p>7 Days Replacement</p>
-            </div>
-
-            <div className="shipping-box">
-              <input type="text" placeholder="Enter your pincode" />
-              <button>Check</button>
-            </div>
-          </div>
-        </div>
-
-        {zoomVisible && (
-          <div
-            className="zoom-preview"
-            style={{
-              backgroundImage: `url(${selectedImg || img})`,
-              backgroundPosition: `${zoomPosition.x}% ${zoomPosition.y}%`,
-            }}
-          ></div>
-        )}
-
-        <div className="tabs">
-          <button
-            className={activeTab === "description" ? "active" : ""}
-            onClick={() => setActiveTab("description")}
-          >
-            Description
-          </button>
-          <button
-            className={activeTab === "specs" ? "active" : ""}
-            onClick={() => setActiveTab("specs")}
-          >
-            Product Specification
-          </button>
-        </div>
-
-        <div className="tab-content">
-          {activeTab === "description" ? (
-            <p>{description}</p>
-          ) : (
-            <ul>
-              <li>Resolution: {resolution}</li>
-              <li>Screen Size: 40 Inch</li>
-              <li>Smart TV: Yes</li>
-              <li>HDMI Ports: 2</li>
-              <li>USB Ports: 2</li>
-              <li>Warranty: 2 Years</li>
-            </ul>
-          )}
-        </div>
-
-        <div className="reviews-section">
-          <h3>Customer Reviews</h3>
-          <p>⭐ 5.0/5 (Based on 2 reviews)</p>
-          <div className="review">
-            <strong>Anonymous</strong>
-            <p>Best TV</p>
-          </div>
-          <div className="review">
-            <strong>Saikiran Paladugula</strong>
-            <p>I am very happy with the buy :)</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // ✅ Main Product List
   return (
     <div className="television-page">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <h2>Price</h2>
-        <div className="price-filter">
-          <input
-            type="range"
-            min="10000"
-            max="100000"
-            step="1000"
-            value={price}
-            onChange={(e) => setPrice(Number(e.target.value))}
-          />
-          <div className="price-range">₹10000 - ₹{price}</div>
-        </div>
+      {/* Back Button */}
+      <div className="back-btn-wrapper">
+        <Link to="/" className="back-btn">⬅ Back</Link>
+      </div>
 
-        <h2>Availability</h2>
-        <div className="availability">
-          <label>
-            <input
-              type="radio"
-              name="availability"
-              checked={availability === "all"}
-              onChange={() => setAvailability("all")}
-            />{" "}
-            All
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="availability"
-              checked={availability === "inStock"}
-              onChange={() => setAvailability("inStock")}
-            />{" "}
-            In Stock
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="availability"
-              checked={availability === "outOfStock"}
-              onChange={() => setAvailability("outOfStock")}
-            />{" "}
-            Out of Stock
-          </label>
-        </div>
+      {/* ✅ Filter Toggle Button (Mobile) */}
+      <button
+        className="filter-toggle-btn"
+        onClick={() => setShowFilters(!showFilters)}
+      >
+        {showFilters ? "Hide Filters" : "Show Filters"}
+      </button>
 
-        {/* ✅ Clear All button */}
-        <button className="clear-btn" onClick={clearAllFilters}>
-          Clear All
-        </button>
+      {/* Left Filters Section */}
+      <aside className={`filters ${showFilters ? "open" : ""}`}>
+        <input
+          type="text"
+          placeholder="Search products..."
+          className="search-bar"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <div className="filter-group">
+          <label>Sort By</label>
+          <select value={sort} onChange={(e) => setSort(e.target.value)}>
+            <option>Default</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+        <div className="filter-group">
+          <label>Category</label>
+          <select value={category} onChange={(e) => setCategory(e.target.value)}>
+            <option>All</option>
+            <option>32 Inch</option>
+            <option>43 Inch</option>
+            <option>55 Inch</option>
+          </select>
+        </div>
       </aside>
 
-      {/* Product Grid */}
-      <main className="product-section">
-        <div className="product-header">
-          <h1>Smart TV</h1>
-          <div className="filters">
-            <select>
-              <option>20 items per page</option>
-              <option>40 items per page</option>
-            </select>
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-              <option value="featured">Sort by Featured</option>
-              <option value="priceLowHigh">Sort by Price: Low to High</option>
-              <option value="priceHighLow">Sort by Price: High to Low</option>
-              <option value="nameAZ">Sort by Name (A–Z)</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="product-grid">
+      {/* Main Content */}
+      <div className="television-container">
+        <h2 className="television-title">Latest LED Televisions</h2>
+        <div className="television-grid">
           {filteredTVs.length > 0 ? (
             filteredTVs.map((tv) => (
-              <div
-                key={tv.id}
-                className="product-card"
-                onClick={() => {
-                  setSelectedProduct(tv);
-                  setSelectedImg(tv.img);
-                }}
-              >
-                <span className="discount">Save {tv.discount}</span>
-                <img src={tv.img} alt={tv.name} />
+              <div key={tv.id} className="television-card">
+                {/* Badge */}
+                {tv.badge && (
+                  <span className={`badge ${tv.badgeType}`}>{tv.badge}</span>
+                )}
+
+                {/* Product Image */}
+                <Link to={`/television/${tv.id}`}>
+                  <img src={tv.img} alt={tv.name} className="television-image" />
+                </Link>
+
+                {/* Product Info */}
                 <h3>{tv.name}</h3>
-                <p className="old-price">Rs. {tv.oldPrice}</p>
-                <p className="new-price">Rs. {tv.newPrice}</p>
-                <p className="resolution">{tv.resolution}</p>
+                <p className="television-price">
+                  <span className="old-price">₹{tv.oldPrice}</span>{" "}
+                  <span className="new-price">₹{tv.newPrice}</span>
+                </p>
+                <p className="television-discount">Save {tv.discount}</p>
+
+                {/* Buttons */}
+                <button className="cart-btn">🛒 Add to Cart</button>
+                <Link to={`/television/${tv.id}`} className="details-btn">
+                  View Details
+                </Link>
               </div>
             ))
           ) : (
-            <p className="no-results">No products found</p>
+            <p>No products found!</p>
           )}
         </div>
-
-        {/* ✅ Out of Stock Section */}
-        <h2>Out of Stock</h2>
-        <div className="product-grid out-stock">
-          {televisions
-            .filter((tv) => tv.soldOut)
-            .map((tv) => (
-              <div key={tv.id} className="product-card sold">
-                <span className="sold-out">Sold Out</span>
-                <img src={tv.img} alt={tv.name} />
-                <h3>{tv.name}</h3>
-                <p className="old-price">Rs. {tv.oldPrice}</p>
-                <p className="new-price">Rs. {tv.newPrice}</p>
-              </div>
-            ))}
-        </div>
-      </main>
+      </div>
     </div>
   );
 };

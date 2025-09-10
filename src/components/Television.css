@@ -1,386 +1,258 @@
-/* Page Layout */
 .television-page {
+    position: relative;
     display: flex;
-    font-family: Arial, sans-serif;
-    background: #fff;
-    padding: 20px;
     gap: 20px;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 280px;
-    /* bigger */
-    border-right: 1px solid #eee;
-    padding: 15px;
-    background: #fafafa;
-    border-radius: 10px;
-}
-
-.sidebar h2 {
-    font-size: 18px;
-    margin: 20px 0 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 8px 0;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.sidebar ul li.active {
-    font-weight: bold;
-    color: #000;
-}
-
-.color-picker .color {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    margin: 5px;
-    border: 1px solid #ccc;
-}
-
-.color.black {
-    background: #000;
-}
-
-.price-filter input[type="range"] {
-    width: 100%;
-}
-
-.price-range {
-    font-size: 14px;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-.availability label {
-    display: block;
-    font-size: 15px;
-    margin: 6px 0;
-}
-
-/* Product Section */
-.product-section {
-    flex: 1;
-}
-
-.product-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
     flex-wrap: wrap;
 }
 
-.product-header h1 {
-    font-size: 22px;
-    margin: 0;
-}
-
-.filters select {
-    margin-left: 10px;
-    padding: 5px;
+/* 🔙 Back Button */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    background: #444;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    z-index: 10;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+.back-btn:hover {
+    background: #222;
 }
 
-.product-card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 10px;
-    position: relative;
+/* Sidebar Filters */
+.filters {
+    flex: 0 0 220px;
     background: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    margin-top: 4rem;
 }
 
-.product-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
+.search-bar {
     width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
     border-radius: 8px;
 }
 
-.discount {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #00a859;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 6px;
-    border-radius: 5px;
+.filter-group {
+    margin-bottom: 15px;
 }
 
-.sold-out {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #999;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 6px;
-    border-radius: 5px;
+.filter-group label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Right Content */
+.television-container {
+    flex: 1;
+    min-width: 280px;
+}
+
+.television-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.television-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.television-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.television-card:hover {
+    transform: translateY(-5px);
+}
+
+.television-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.television-price {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .old-price {
     text-decoration: line-through;
-    color: #999;
-    font-size: 14px;
+    color: #888;
+    margin-right: 6px;
 }
 
 .new-price {
-    font-weight: bold;
     color: #e60000;
-    font-size: 16px;
+    font-weight: bold;
 }
 
-.resolution {
-    font-size: 13px;
-    color: #333;
-    margin-top: 5px;
+.television-discount {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a9d8f;
 }
 
-.no-results {
-    grid-column: 1 / -1;
-    text-align: center;
+.television-rating {
+    font-size: 14px;
+    color: #444;
+    margin: 6px 0;
+}
+
+/* Buttons */
+.cart-btn,
+.details-btn {
+    display: inline-block;
+    min-width: 110px;
+    margin: 6px 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cart-btn {
+    background: #000;
+    color: #fff;
+}
+
+.cart-btn:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+.details-btn {
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.details-btn:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.badge.best-seller {
+    background: #ff4d4d;
+}
+
+.badge.new {
+    background: #2ecc71;
+}
+
+/* ✅ Filter Toggle Button */
+.filter-toggle-btn {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
-    color: #666;
-    padding: 20px 0;
+    font-weight: bold;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.filter-toggle-btn:hover {
+    background: #005bb5;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 900px) {
     .television-page {
         flex-direction: column;
     }
 
-    .sidebar {
+    .filters {
+        display: none;
+        /* hidden by default */
         width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        margin-bottom: 20px;
+        order: 2;
+        margin-bottom: 15px;
+    }
+
+    .filters.open {
+        display: block;
+        /* toggle pe visible */
+        order: 0;
+        /* ✅ upar le aao */
+        margin-bottom: 15px;
+    }
+
+    .filter-toggle-btn {
+        display: block;
+        /* button visible */
+    }
+
+    .television-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 }
 
 @media (max-width: 600px) {
-    .product-grid {
-        grid-template-columns: 1fr;
+    .television-title {
+        font-size: 20px;
     }
-}
 
-.product-detail {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
+    .television-image {
+        height: 140px;
+    }
 
-.back-btn {
-    margin-bottom: 15px;
-    background: none;
-    border: none;
-    color: #0073e6;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.detail-container {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
-    align-items: flex-start;
-}
-
-/* Left: Image Gallery */
-.detail-img {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 450px;
-}
-
-.gallery {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.thumbnail-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.thumbnail {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.thumbnail.active {
-    border: 2px solid #0073e6;
-}
-
-.main-image img {
-    width: 350px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-/* Right: Product Info */
-.detail-info {
-    flex: 1;
-}
-
-.detail-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.price-box {
-    margin: 15px 0;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 15px;
-}
-
-.new-price {
-    font-weight: bold;
-    font-size: 22px;
-    color: #e60000;
-}
-
-.discount {
-    margin-left: 10px;
-    color: green;
-    font-weight: bold;
-}
-
-.detail-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.qty {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-}
-
-.cart-btn {
-    background: #ff9800;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.buy-btn {
-    background: #e60000;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Tabs */
-.tabs {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.tabs button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s;
-}
-
-.tabs button.active {
-    border-bottom: 3px solid #0073e6;
-    font-weight: bold;
-    color: #0073e6;
-}
-
-.tab-content {
-    margin-top: 15px;
-    font-size: 15px;
-    color: #444;
-    line-height: 1.6;
-}
-
-.tab-content ul {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-/* Reviews */
-.reviews-section {
-    margin-top: 30px;
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
-}
-
-.review {
-    margin-top: 10px;
-}
-
-
-.main-image {
-    position: relative;
-    width: 350px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    overflow: hidden;
-}
-
-.main-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.zoom-preview {
-    position: absolute;
-    top: 100px;
-    left: 500px;
-    /* image ke side me show hoga */
-    width: 400px;
-    height: 400px;
-    border: 1px solid #ddd;
-    background-repeat: no-repeat;
-    background-size: 200%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 100;
+    .cart-btn,
+    .details-btn {
+        min-width: auto;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
 }

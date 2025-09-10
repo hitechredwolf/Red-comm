@@ -12,14 +12,14 @@
 
 /* Banner */
 .banner {
-    background: linear-gradient(to right, #cc0000, #ff4d4d);
+    background: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
     color: white;
     padding: 60px 20px;
     text-align: center;
     border-radius: 15px;
     margin-bottom: 50px;
     animation: fadeSlideDown 1s ease-out;
-    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(26, 43, 50, 0.3);
 }
 
 .banner h1 {
@@ -44,8 +44,8 @@
 }
 
 .white-bg {
-    background-color: #fff5f5;
-    border-left: 5px solid #cc0000;
+    background-color: #f0f7f8;
+    border-left: 5px solid #304950;
     border-radius: 12px;
     padding: 30px 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -55,7 +55,7 @@
 .section-title {
     font-size: 2.2rem;
     text-align: center;
-    color: #cc0000;
+    color: #304950;
     position: relative;
     margin-bottom: 30px;
     font-weight: 700;
@@ -65,7 +65,7 @@
     content: '';
     width: 60px;
     height: 4px;
-    background: #cc0000;
+    background: #304950;
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
@@ -101,10 +101,10 @@
 }
 
 .card:hover {
-    border-color: #cc0000;
+    border-color: #304950;
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(255, 0, 0, 0.2);
-    background: linear-gradient(to top right, #ffeaea, #ffffff);
+    box-shadow: 0 12px 25px rgba(48, 73, 80, 0.2);
+    background: linear-gradient(to top right, #e0f0f2, #ffffff);
 }
 
 .card::before {
@@ -114,7 +114,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.05), transparent);
+    background: radial-gradient(circle, rgba(48, 73, 80, 0.05), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -139,9 +139,9 @@
     margin-bottom: 15px;
     padding: 12px 16px;
     background: #fff;
-    border-left: 5px solid #cc0000;
+    border-left: 5px solid #304950;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(48, 73, 80, 0.08);
     transition: all 0.3s ease;
     font-size: 1rem;
     position: relative;
@@ -150,17 +150,17 @@
 .feature-list li:hover,
 .vision-list li:hover,
 .benefits-list li:hover {
-    background-color: #ffeaea;
+    background-color: #e0f0f2;
     transform: scale(1.02);
     font-weight: 600;
-    border-left-color: #ff1a1a;
+    border-left-color: #1a2b32;
 }
 
 /* Icon Style in Headings */
 .section-title svg {
     vertical-align: middle;
     margin-right: 10px;
-    color: #cc0000;
+    color: #304950;
 }
 
 /* Closing Text */
@@ -179,7 +179,6 @@
         opacity: 0;
         transform: translateY(-50px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -191,7 +190,6 @@
         opacity: 0;
         transform: translateY(50px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -202,7 +200,6 @@
     from {
         width: 0;
     }
-
     to {
         width: 60px;
     }
@@ -210,15 +207,13 @@
 
 @keyframes pulseGlow {
     0% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #ff1a1a;
+        text-shadow: 0 0 5px #fff, 0 0 10px #1a2b32;
     }
-
     50% {
-        text-shadow: 0 0 15px #fff, 0 0 25px #ff4d4d;
+        text-shadow: 0 0 15px #fff, 0 0 25px #304950;
     }
-
     100% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #ff1a1a;
+        text-shadow: 0 0 5px #fff, 0 0 10px #1a2b32;
     }
 }
 
@@ -226,7 +221,6 @@
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -237,24 +231,19 @@
     .banner h1 {
         font-size: 2rem;
     }
-
     .banner p {
         font-size: 1rem;
     }
-
     .section-title {
         font-size: 1.6rem;
     }
-
     .card {
         padding: 20px;
     }
-
     .description,
     .closing-text {
         font-size: 1rem;
     }
-
     .feature-list li,
     .vision-list li,
     .benefits-list li {
@@ -262,23 +251,19 @@
     }
 }
 
-
-
+/* Bounce Animation */
 @keyframes bounceIn {
     0% {
         opacity: 0;
         transform: scale(0.3);
     }
-
     50% {
         opacity: 1;
         transform: scale(1.05);
     }
-
     70% {
         transform: scale(0.9);
     }
-
     100% {
         transform: scale(1);
     }
@@ -288,6 +273,7 @@
     animation: bounceIn 1s ease;
 }
 
+/* Banner Image */
 .banner-image {
     position: relative;
     width: 100%;
@@ -313,8 +299,9 @@
     text-align: center;
 }
 
+/* Mission Vision Section */
 .rw-mission-vision {
-    background-color: #feeeee;
+    background-color: #e0f0f2;
     color: #030303;
     padding: 80px 20px;
     font-family: 'Segoe UI', sans-serif;
@@ -331,23 +318,23 @@
 
 .rw-box {
     flex: 1 1 48%;
-    /* background: linear-gradient(to top right, #1c1c1c, #8a0000); */
+    background: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
     border-radius: 16px;
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(26, 43, 50, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rw-box:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 15px 30px rgba(26, 43, 50, 0.3);
 }
 
 .rw-heading {
-    color: #ff3d3d;
+    color: #1a2b32;
     font-size: 2rem;
     margin-bottom: 15px;
-    border-left: 6px solid #ff3d3d;
+    border-left: 6px solid #1a2b32;
     padding-left: 15px;
 }
 
@@ -355,7 +342,7 @@
     font-size: 1.2rem;
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #ff6b6b;
+    color: #304950;
 }
 
 .rw-box p {
@@ -383,7 +370,7 @@
     content: '➤';
     position: absolute;
     left: 0;
-    color: #ff3333;
+    color: #1a2b32;
     font-size: 0.9rem;
 }
 
@@ -392,20 +379,16 @@
     .rw-split-container {
         flex-direction: column;
     }
-
     .rw-box {
         flex: 1 1 100%;
         padding: 30px;
     }
-
     .rw-heading {
         font-size: 1.5rem;
     }
 }
 
-
-/* FOURTH  */
-
+/* Brand Attributes Section */
 .brand-attributes-container {
     text-align: center;
     padding: 40px 20px;
@@ -466,18 +449,7 @@
     margin-top: 6px;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* === Event Section === */
-
+/* Event Section */
 .event-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -526,7 +498,7 @@
     color: #444;
 }
 
-/* === Modal Styles === */
+/* Modal Styles */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -549,15 +521,14 @@
     width: 100%;
     max-width: 900px;
     position: relative;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeInModal 0.3s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInModal {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -578,7 +549,7 @@
 }
 
 .close-btn:hover {
-    color: #cc0000;
+    color: #1a2b32;
 }
 
 .modal-content h3 {
@@ -587,7 +558,7 @@
     color: #222;
 }
 
-/* === Image Grid in Modal === */
+/* Image Grid in Modal */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -607,16 +578,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* === Responsive Adjustments === */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .modal-content {
         padding: 15px;
     }
-
     .event-section .section-title {
         font-size: 1.5rem;
     }
-
     .image-grid img {
         height: auto;
     }
@@ -626,8 +595,34 @@
     .event-card h3 {
         font-size: 1rem;
     }
-
     .modal-content h3 {
         font-size: 1.2rem;
     }
+}
+/* Vision and Mission Section */
+.rw-box {
+    flex: 1 1 48%;
+    background: linear-gradient(to right, #1a2b32, #304950, #6da5a0);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(26, 43, 50, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff; /* Ensure text is white and visible */
+}
+
+.rw-box h2,
+.rw-box h4 {
+    color: #ffffff; /* Headings white */
+}
+
+.rw-box p {
+    color: #f0f0f0; /* Slightly lighter white for paragraphs */
+}
+
+.rw-box ul li {
+    color: #f0f0f0; /* List items text visible */
+}
+
+.rw-box ul li::before {
+    color: #ffffff; /* List bullet icon in white */
 }

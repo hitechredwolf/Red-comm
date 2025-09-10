@@ -1,36 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Speaker.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Import product images
-import m1 from "../components/images/m1.jpeg";
-import m2 from "../components/images/m2.jpeg";
-import m3 from "../components/images/m3.jpeg";
-import m4 from "../components/images/m4.jpeg";
-import m5 from "../components/images/m5.jpeg";
-import m6 from "../components/images/m6.jpeg";
-import m7 from "../components/images/m7.jpeg";
-import m8 from "../components/images/m8.jpeg";
-import m9 from "../components/images/m9.jpeg";
-import m10 from "../components/images/m10.jpeg";
-import m11 from "../components/images/m11.jpeg";
-import m12 from "../components/images/m12.jpeg";
+// Import data from data.js
+import { banners, speakers } from "./data";
 
-// Dummy product data
-export const dummyProducts = [
-  { id: 1, name: "Speaker Alpha", price: 120, category: "Portable", image: m1, image1: m2, image2: m3, image3: m4 },
-  { id: 2, name: "Speaker Beta", price: 150, category: "Portable", image: m2, image1: m2, image2: m3, image3: m4 },
-  { id: 3, name: "Speaker Gamma", price: 200, category: "Home", image: m3, image1: m2, image2: m3, image3: m4 },
-  { id: 4, name: "Speaker Delta", price: 90, category: "Portable", image: m4, image1: m2, image2: m3, image3: m4 },
-  { id: 5, name: "Speaker Epsilon", price: 300, category: "Home", image: m5, image1: m2, image2: m3, image3: m4 },
-  { id: 6, name: "Speaker Zeta", price: 250, category: "Car", image: m6, image1: m2, image2: m3, image3: m4 },
-  { id: 7, name: "Speaker Eta", price: 180, category: "Home", image: m7, image1: m2, image2: m3, image3: m4 },
-  { id: 8, name: "Speaker Theta", price: 220, category: "Car", image: m8, image1: m2, image2: m3, image3: m4 },
-  { id: 9, name: "Speaker Iota", price: 130, category: "Portable", image: m9, image1: m2, image2: m3, image3: m4 },
-  { id: 10, name: "Speaker Kappa", price: 400, category: "Home", image: m10, image1: m2, image2: m3, image3: m4 },
-  { id: 11, name: "Speaker Lambda", price: 350, category: "Car", image: m11, image1: m2, image2: m3, image3: m4 },
-  { id: 12, name: "Speaker Mu", price: 275, category: "Home", image: m12, image1: m2, image2: m3, image3: m4 },
-];
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: true,
+};
 
 function Speaker() {
   const [search, setSearch] = useState("");
@@ -38,8 +25,7 @@ function Speaker() {
   const [filter, setFilter] = useState("All");
   const navigate = useNavigate();
 
-  // Apply search, filter, and sorting
-  const filteredProducts = dummyProducts
+  const filteredProducts = speakers
     .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()))
     .filter((p) => (filter === "All" ? true : p.category === filter))
     .sort((a, b) => {
@@ -51,6 +37,22 @@ function Speaker() {
 
   return (
     <div className="speaker-page">
+      {/* Back Button */}
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        ← Back
+      </button>
+
+      {/* Banner Slider */}
+      <div className="banner-slider">
+        <Slider {...settings}>
+          {banners.map((banner, index) => (
+            <div key={index}>
+              <img src={banner} alt={`Banner ${index + 1}`} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
       <div className="layout">
         {/* Sidebar Filters */}
         <div className="sidebar">
@@ -93,19 +95,15 @@ function Speaker() {
         <div className="product-grid">
           {filteredProducts.map((product) => (
             <div key={product.id} className="product-card">
-              {/* Discount or Badge */}
               {product.price > 300 ? (
                 <span className="badge hot">🔥 Best Seller</span>
               ) : (
                 <span className="badge new">✨ New</span>
               )}
 
-              {/* Wishlist Button */}
               <button className="wishlist-btn">♡</button>
 
-              {/* Flip Card */}
               <div className="card-inner">
-                {/* Front Side */}
                 <div className="card-front">
                   <div className="product-image">
                     <img src={product.image} alt={product.name} />
@@ -115,7 +113,6 @@ function Speaker() {
                   <p className="price">${product.price}</p>
                 </div>
 
-                {/* Back Side */}
                 <div className="card-back">
                   <p>
                     <strong>Category:</strong> {product.category}
