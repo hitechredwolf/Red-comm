@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Nav.css";
+
 import logo from "./images/redwolflogo.png";
 import { FaSearch, FaUser, FaHeart, FaShoppingBag, FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 

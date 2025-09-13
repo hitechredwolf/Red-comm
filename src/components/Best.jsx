@@ -1,42 +1,61 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Best.css";
+import inch32 from "../components/images/55.jpg";
+import inch33 from "../components/images/32.jpg";
+import inch34 from "../components/images/Rock & Roll (1).jpg";
+import inch35 from "../components/images/Funk.jpg";
 
 const products = [
     {
         id: 1,
-        name: "Apple iPhone 16 (128GB Storage, Teal)",
-        price: "₹71,900",
-        mrp: "₹79,900",
+        name: `55-Inch Frameless Full Ultra HD Display`,
+        price: "65,000",
+        mrp: "₹75,000",
         discount: "10% off",
-        img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone16-green-select?wid=940&hei=1112&fmt=png-alpha&.v=1716498841031",
+        img: inch32,
     },
     {
         id: 2,
-        name: "Apple iPhone 16e (512GB Storage, Black)",
-        price: "₹70,550",
-        mrp: "₹89,900",
+        name: "32-Inch HD Display Frameless Smart LED TV",
+        price: "₹17,680",
+        mrp: "₹20,000",
         discount: "22% off",
-        img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone16-black-select?wid=940&hei=1112&fmt=png-alpha&.v=1716498841031",
+        img: inch33,
     },
     {
         id: 3,
-        name: "Apple AirPods Pro (2nd Gen)",
-        price: "₹16,900",
+        name: "Rock & Roll Class D Amplifier",
+        price: "₹15,222",
         mrp: "₹19,900",
         discount: "15% off",
-        img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83?wid=940&hei=1112&fmt=png-alpha&.v=1676586054480",
+        img: inch34,
     },
     {
         id: 4,
-        name: "Apple Watch Series 9 (GPS, 41mm, Midnight)",
-        price: "₹38,900",
-        mrp: "₹41,900",
+        name: "Funk Class AB Amplifier",
+        price: "₹5,487",
+        mrp: "₹9,000",
         discount: "7% off",
-        img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQKX3ref_VW_34FR+watch-case-41-midnight-nc-s9_VW_34FR+watch-face-41-starlight-s9_VW_34FR_GEO_IN?wid=940&hei=1112&fmt=png-alpha&.v=1693846213344",
+        img: inch35,
     },
 ];
 
 function Best() {
+    const navigate = useNavigate();
+
+    const handleProductClick = (product) => {
+        if (product.id === 1 || product.id === 2) {
+            navigate("/television");
+        } else {
+            navigate("/speaker");
+        }
+    };
+
+    const handleViewAll = () => {
+        navigate("/television");
+    };
+
     return (
         <div className="apple-section">
             <div className="apple-header">
@@ -45,13 +64,12 @@ function Best() {
                     Save up to ₹5,000 instantly on eligible products using ICICI & SBI Card
                     Credit Cards | Exchange bonus upto ₹6,000 on iPhone
                 </p>
-                <button className="view-all">View All</button>
+                <button className="view-all" onClick={handleViewAll}>View All</button>
             </div>
 
-            {/* Cards wrapper */}
             <div className="apple-cards">
                 {products.map((item) => (
-                    <div className="apple-card" key={item.id}>
+                    <div className="apple-card" key={item.id} onClick={() => handleProductClick(item)}>
                         <img src={item.img} alt={item.name} />
                         <h3>{item.name}</h3>
                         <div className="price-row">

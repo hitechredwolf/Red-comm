@@ -1,23 +1,74 @@
+// banners images speakers and television's
+
 import banner1 from "../components/images/tagline.jpeg";
 import banner2 from "../components/images/smt32.jpeg";
 import banner3 from "../components/images/smtspkr.jpeg";
+import banner4 from "../components/images/banner1.png";
+import banner5 from "../components/images/banner1.png";
+import banner6 from "../components/images/banner1.png";
 
-import m1 from "../components/images/m1.jpeg";
-import m2 from "../components/images/m2.jpeg";
-import m3 from "../components/images/m3.jpeg";
-import m4 from "../components/images/m4.jpeg";
-import m5 from "../components/images/m5.jpeg";
-import m6 from "../components/images/m6.jpeg";
-import m7 from "../components/images/m7.jpeg";
-import m8 from "../components/images/m8.jpeg";
-import m9 from "../components/images/m9.jpeg";
-import m10 from "../components/images/m10.jpeg";
-import m11 from "../components/images/m11.jpeg";
-import m12 from "../components/images/m12.jpeg";
+
+
+
+
+import m1 from "../components/images/Classic & Brass.jpg";
+import m2 from "../components/images/Harmony X.jpg";
+import m3 from "../components/images/Funk.jpg";
+import m4 from "../components/images/Sonic 80.jpg";
+import m5 from "../components/images/Trance Jr.jpg";
+import m6 from "../components/images/Sonic 200.jpg";
+import m7 from "../components/images/New Wave 100.jpg";
+import m8 from "../components/images/K-POP.jpg";
+import m9 from "../components/images/Rock & Roll.jpg";
+import m10 from "../components/images/Trance.jpg";
+import m11 from "../components/images/New Wave 200.jpg";
+import m12 from "../components/images/Pulse Box.jpg";
+import m13 from "../components/images/Remot.jpg";
+import m14 from "../components/images/feturs.jpg";
+
+
+
+
+// television import links
+import tcom from "../components/images/tcom.jpg";
+import tcom1 from "../components/images/1080(2).jpg";
+import tcom2 from "../components/images/1080(3).jpg";
+import tcom3 from "../components/images/1080(4).jpg";
+import tcom4 from "../components/images/1080(5).jpg";
+import tcom5 from "../components/images/1080(6).jpg";
+import tcom4k6 from "../components/images/4k(6).jpg";
+import tcom4k1 from "../components/images/4k(1).jpg";
+import tcom4k2 from "../components/images/4k(2).jpg";
+import tcom4k3 from "../components/images/4k(3).jpg";
+import tcom4k4 from "../components/images/4k(4).jpg";
+import tcom4k5 from "../components/images/4k(5).jpg";
+import backled from "../components/images/Backled.jpg";
+
+import detailscom from "../components/images/details e-com.jpg"
+import detailscom4k from "../components/images/details 4kcom.jpg"
+import remotcom from "../components/images/Remote E-com.jpg"
+import viewtv from "../components/images/6.jpg"
+import view7tv from "../components/images/7.jpg"
+import view8tv from "../components/images/8.jpg"
+import view9tv from "../components/images/9.jpg"
+import view10tv from "../components/images/10.jpg"
+import view13tv from "../components/images/13.jpg"
+import view11tv from "../components/images/11.jpg"
+import view12tv from "../components/images/12.jpg"
+
+
+
+
+
+
+
+
 
 // Banner images array
 export const banners = [banner1, banner2, banner3];
 
+// Speaker products array
+//LUCKY
 // Speaker products array
 export const speakers = [
   {
@@ -27,8 +78,8 @@ export const speakers = [
     category: "Portable",
     image: m1,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
       type: "Portable Rechargeable Trolley Sound System",
       outputSound: "12 Watt",
@@ -37,9 +88,10 @@ export const speakers = [
       battery: "2600 mAh Li-ion Battery",
       height: "20 Inches",
       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
+      auxConnection: "Yes",
       productHeight: "24 Inches",
-      backup: "4+ Hours"
+      backup: "4+ Hours",
+      warranty: "No Warranty"
     }
   },
   {
@@ -49,19 +101,22 @@ export const speakers = [
     category: "Portable",
     image: m2,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
+      type: "Class AB Amplifier with High Bass Performance",
+      outputSound: "60 Watt RMS",
+      wooferSize: "5.25 Inches",
+      speakerSize: "3 inches x 2 Pcs",
+      controlType: "Rotary",
+      wireMicSocket: "Available",
+      bluetoothConnectivity: "Yes",
+      auxConnection: "Yes",
       productHeight: "24 Inches",
-      backup: "4+ Hours"
+      woodenThickness: "7 MM",
+      woodenType: "MDF",
+      wirelessMicAddOn: "Available",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -71,21 +126,22 @@ export const speakers = [
     category: "Home",
     image: m3,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
+      type: "Class AB Amplifier with High Bass Performance",
+      powerOutput: "50W RMS",
+      speakerSize: "3 inches x 2",
+      wooferSize: "5.25 Inches",
+      bassControl: "Rotary Type",
+      wiredMic: "Included",
+      remoteControl: "Yes",
       productHeight: "24 Inches",
-      backup: "4+ Hours"
+      volumeControl: "Rotary Type",
+      warranty: "6 Months Warranty"
     }
   },
+  //LUCKY
   {
     id: 4,
     name: "Sonic80",
@@ -93,19 +149,22 @@ export const speakers = [
     category: "Portable",
     image: m4,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
+      type: "Class AB Amplifier with High Bass Performance",
+      outputSound: "60 Watt RMS",
+      wooferSize: "5.25 Inches",
+      speakerSize: "3 inches x 2 Pcs",
+      controlType: "Rotary",
+      wireMicSocket: "Available",
+      bluetoothConnectivity: "Yes",
+      auxConnection: "Yes",
       productHeight: "24 Inches",
-      backup: "4+ Hours"
+      woodenThickness: "7 MM",
+      woodenType: "MDF",
+      wirelessMicAddOn: "Available",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -115,19 +174,19 @@ export const speakers = [
     category: "Home",
     image: m5,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier with High Bass Performance",
+      powerOutput: "90W RMS",
+      speakerSize: "4 inches x 2 Pcs",
+      wooferSize: "8 Inches x 1 Piece",
+      bassControl: "Rotary Type",
+      tweeterSize: "4 Inches",
+      multiModeRGBLight: "Yes",
+      productHeight: "18.5 Inches",
+      volumeControl: "Rotary Type",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -137,21 +196,21 @@ export const speakers = [
     category: "Car",
     image: m6,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier with High Bass Performance",
+      powerOutput: "120W RMS",
+      speakerSize: "4 inches x 2 Pcs",
+      wooferSize: "8 Inches x 2 Pcs",
+      bassControl: "Rotary Type",
+      remoteControl: "Yes",
+      productHeight: "25 Inches",
+      volumeControl: "Rotary Type",
+      warranty: "6 Months Warranty"
     }
   },
+  //LUCKY
   {
     id: 7,
     name: "New Wave 100",
@@ -159,19 +218,19 @@ export const speakers = [
     category: "Home",
     image: m7,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier Based On IC 7294",
+      powerOutput: "130 Watt RMS",
+      wooferSize: "8 Inches x 2 Pcs",
+      speakerSize: "4 Inches",
+      controlType: "Rotary",
+      tweeterSize: "4 Inches",
+      productHeight: "38 Inches",
+      bassControl: "Rotary Type",
+      wirelessMicAddOn: "With Remote",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -181,21 +240,25 @@ export const speakers = [
     category: "Car",
     image: m8,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier with High Bass Performance",
+      outputSound: "175 Watt RMS",
+      wooferSize: "10 Inches",
+      speakerSize: "4 Inches x 2 Pcs",
+      controlType: "Rotary",
+      tweeterSize: "2.5 Inches",
+      bluetoothConnectivity: "Yes",
+      auxConnection: "Yes",
+      productHeight: "36 Inches",
+      woodenThickness: "11 MM",
+      woodenType: "MDF",
+      wirelessMicAddOn: "Available",
+      warranty: "6 Months Warranty"
     }
   },
+  //LUCKY
   {
     id: 9,
     name: "Rock & Roll",
@@ -203,19 +266,23 @@ export const speakers = [
     category: "Portable",
     image: m9,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class D Amplifier with High Bass Performance",
+      outputSound: "60 Watt RMS",
+      wooferSize: "8 Inches x 2 Pcs",
+      battery: "10400 mAh 10 Amp",
+      volumeControl: "Rotary Type",
+      wirelessMic: "Yes",
+      backup: "Up to 5 Hrs",
+      soundEqualizer: "Manual",
+      inputPower: "9V DC",
+      micInSlot: "Yes",
+      guitarInSlot: "Yes",
+      ledDisplay: "Big Information LED Display",
+      rgbLightModes: "8 Modes",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -225,21 +292,22 @@ export const speakers = [
     category: "Home",
     image: m10,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier Based On IC 7294 with High Bass Performance",
+      powerOutput: "150W RMS",
+      speakerSize: "4 inches x 2 Pcs",
+      wooferSize: "8 Inches x 2 Pcs",
+      bassControl: "Rotary Type",
+      tweeterSize: "4 Inches x 2 Pcs",
+      rgbLight: "Programmed RGB Light",
+      productHeight: "36 Inches",
+      volumeControl: "Rotary Type",
+      warranty: "6 Months Warranty"
     }
   },
+  //LUCKY
   {
     id: 11,
     name: "New Wave 200",
@@ -247,19 +315,19 @@ export const speakers = [
     category: "Car",
     image: m11,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
-      auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      type: "Class AB Amplifier with High Bass Performance",
+      powerOutput: "150 Watt RMS",
+      wooferSize: "8 Inches x 2 Bass",
+      speakerSize: "4 Inches x 4",
+      controlType: "Rotary",
+      productHeight: "32 Inches",
+      volumeControl: "Rotary Type",
+      wirelessMicAddOn: "With Remote",
+      rgbLightModes: "Multi Mode",
+      warranty: "6 Months Warranty"
     }
   },
   {
@@ -269,19 +337,22 @@ export const speakers = [
     category: "Home",
     image: m12,
     image1: m2,
-    image2: m3,
-    image3: m4,
+    image2: m13,
+    image3: m14,
     specifications: {
-      type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
-      speakerSize: "4 inches x 4 inches",
-      adaptor: "5 Volt (Type-C)",
-      battery: "2600 mAh Li-ion Battery",
-      height: "20 Inches",
-      support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+      type: "Class AB Amplifier with High Bass Performance",
+      powerOutput: "250 Watt RMS",
+      wooferSize: "10 Inches x 2 Pcs",
+      speakerSize: "4 inches x 2 Pcs",
+      controlType: "Rotary",
+      wirelessMic: true,
+      bluetoothConnectivity: true,
       auxConnection: true,
-      productHeight: "24 Inches",
-      backup: "4+ Hours"
+      productHeight: "36 Inches",
+      woodenThickness: "11 MM",
+      woodenType: "MDF",
+      wirelessMicAddOn: true,
+      warranty: "6 Months Warranty"
     }
   }
 ];
@@ -319,306 +390,297 @@ export const speakers = [
 
 
 // ---------------- Televisions Data ----------------
+
+// import tvbanner1 from "../components/images/tagline.jpeg";
+// import tvbanner2 from "../components/images/smt32.jpeg";
+// import tvbanner3 from "../components/images/smtspkr.jpeg";
+
+
+
+// export const tvbanners = [banner1, banner2, banner3];
+
+
+// src/components/data.js
+
+
+
+
+
+
+
+
+
+
+
+
+export const banner = [banner4, banner5, banner6];
+
+
+
+
+
+
+
 export const televisions = [
   {
     id: 1,
-    name: "Cellecor Smart TV E-32X (32 Inch)",
+    name: "Red Wolf Normal LED TV(24 Inch)",
     oldPrice: 15999,
     newPrice: 10140,
     discount: "22%",
-    size: "32 Inch",
-    img: "https://picsum.photos/id/1011/300/200",
-    images: [
-      "https://picsum.photos/id/1011/300/200",
-      "https://picsum.photos/id/1012/300/200",
-      "https://picsum.photos/id/1013/300/200",
-    ],
-    category: "Television"
+    size: "24 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom,
+    images: [tcom, detailscom, remotcom, viewtv],
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
     id: 2,
-    name: "Cellecor Smart TV E-40X (40 Inch)",
+    name: "Red Wolf Smart LED TV(24 Inch)",
     oldPrice: 21999,
     newPrice: 15999,
     discount: "27%",
-    size: "40 Inch",
-    img: "https://picsum.photos/id/1020/300/200",
+    size: "24 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom1,
     images: [
-      "https://picsum.photos/id/1020/300/200",
-      "https://picsum.photos/id/1021/300/200",
-      "https://picsum.photos/id/1022/300/200",
+      tcom1,
+      detailscom,
+      remotcom,
+      viewtv,
+      backled,
     ],
-    category: "Television"
-  },
-  {
-    id: 3,
-    name: "Cellecor Smart TV E-43X (43 Inch)",
-    oldPrice: 24999,
-    newPrice: 17990,
-    discount: "28%",
-    size: "43 Inch",
-    img: "https://picsum.photos/id/1030/300/200",
-    images: [
-      "https://picsum.photos/id/1030/300/200",
-      "https://picsum.photos/id/1031/300/200",
-      "https://picsum.photos/id/1032/300/200",
-    ],
-    category: "Television"
+    category: "Smart LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
     id: 4,
-    name: "Cellecor Smart TV E-50X (50 Inch)",
+    name: "Red Wolf Smart LED TV(32 Inch)",
     oldPrice: 29999,
     newPrice: 21990,
     discount: "26%",
-    size: "50 Inch",
-    img: "https://picsum.photos/id/1040/300/200",
+    size: "32 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom2,
     images: [
-      "https://picsum.photos/id/1040/300/200",
-      "https://picsum.photos/id/1041/300/200",
-      "https://picsum.photos/id/1042/300/200",
+      tcom2,
+      detailscom,
+      remotcom,
+      view7tv,
+      backled,
+
+
     ],
-    category: "Television"
+    category: "Smart LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
     id: 5,
-    name: "Cellecor Smart TV E-55X (55 Inch)",
+    name: "Red Wolf BTR LED TV(32 Inch)",
     oldPrice: 34999,
     newPrice: 25999,
     discount: "25%",
-    size: "55 Inch",
-    img: "https://picsum.photos/id/1050/300/200",
+    size: "32 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom3,
     images: [
-      "https://picsum.photos/id/1050/300/200",
-      "https://picsum.photos/id/1051/300/200",
-      "https://picsum.photos/id/1052/300/200",
+      tcom3,
+      detailscom,
+      remotcom,
+      view7tv,
+      backled,
     ],
-    category: "Television"
+    category: "BTR LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
     id: 6,
-    name: "Cellecor Smart TV E-60X (60 Inch)",
+    name: "Red Wolf Smart LED TV(43 Inch)",
     oldPrice: 39999,
     newPrice: 29990,
     discount: "25%",
-    size: "60 Inch",
-    img: "https://picsum.photos/id/1060/300/200",
+    size: "43 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4,
     images: [
-      "https://picsum.photos/id/1060/300/200",
-      "https://picsum.photos/id/1061/300/200",
-      "https://picsum.photos/id/1062/300/200",
+      tcom4,
+      detailscom,
+      remotcom,
+      view8tv,
+      backled,
     ],
-    category: "Television"
+    category: "Smart LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
     id: 7,
-    name: "Cellecor Smart TV E-65X (65 Inch)",
+    name: "Red Wolf BTR LED TV(43 Inch)",
     oldPrice: 44999,
     newPrice: 33990,
     discount: "24%",
-    size: "65 Inch",
-    img: "https://picsum.photos/id/1070/300/200",
+    size: "43 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom5,
     images: [
-      "https://picsum.photos/id/1070/300/200",
-      "https://picsum.photos/id/1071/300/200",
-      "https://picsum.photos/id/1072/300/200",
+      tcom5,
+      detailscom,
+      remotcom,
+      view8tv,
+      backled,
     ],
-    category: "Television"
+    category: "BTR LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
-    id: 8,
-    name: "Cellecor Smart TV E-70X (70 Inch)",
-    oldPrice: 49999,
-    newPrice: 37999,
-    discount: "24%",
-    size: "70 Inch",
-    img: "https://picsum.photos/id/1080/300/200",
-    images: [
-      "https://picsum.photos/id/1080/300/200",
-      "https://picsum.photos/id/1081/300/200",
-      "https://picsum.photos/id/1082/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 9,
-    name: "Cellecor Smart TV E-75X (75 Inch)",
-    oldPrice: 54999,
-    newPrice: 40999,
-    discount: "25%",
-    size: "75 Inch",
-    img: "https://picsum.photos/id/1090/300/200",
-    images: [
-      "https://picsum.photos/id/1090/300/200",
-      "https://picsum.photos/id/1091/300/200",
-      "https://picsum.photos/id/1092/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 10,
-    name: "Cellecor Smart TV E-80X (80 Inch)",
-    oldPrice: 59999,
-    newPrice: 44999,
-    discount: "25%",
-    size: "80 Inch",
-    img: "https://picsum.photos/id/1100/300/200",
-    images: [
-      "https://picsum.photos/id/1100/300/200",
-      "https://picsum.photos/id/1101/300/200",
-      "https://picsum.photos/id/1102/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 11,
-    name: "Cellecor Smart TV E-32Y (32 Inch)",
-    oldPrice: 15999,
-    newPrice: 11999,
-    discount: "25%",
-    size: "32 Inch",
-    img: "https://picsum.photos/id/1110/300/200",
-    images: [
-      "https://picsum.photos/id/1110/300/200",
-      "https://picsum.photos/id/1111/300/200",
-      "https://picsum.photos/id/1112/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 12,
-    name: "Cellecor Smart TV E-40Y (40 Inch)",
-    oldPrice: 21999,
-    newPrice: 15999,
-    discount: "27%",
-    size: "40 Inch",
-    img: "https://picsum.photos/id/1120/300/200",
-    images: [
-      "https://picsum.photos/id/1120/300/200",
-      "https://picsum.photos/id/1121/300/200",
-      "https://picsum.photos/id/1122/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 13,
-    name: "Cellecor Smart TV E-43Y (43 Inch)",
+    id: 3,
+    name: "Red Wolf Android LED TV(55 Inch)",
     oldPrice: 24999,
     newPrice: 17990,
     discount: "28%",
-    size: "43 Inch",
-    img: "https://picsum.photos/id/1130/300/200",
-    images: [
-      "https://picsum.photos/id/1130/300/200",
-      "https://picsum.photos/id/1131/300/200",
-      "https://picsum.photos/id/1132/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 14,
-    name: "Cellecor Smart TV E-50Y (50 Inch)",
-    oldPrice: 29999,
-    newPrice: 21990,
-    discount: "26%",
-    size: "50 Inch",
-    img: "https://picsum.photos/id/1140/300/200",
-    images: [
-      "https://picsum.photos/id/1140/300/200",
-      "https://picsum.photos/id/1141/300/200",
-      "https://picsum.photos/id/1142/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 15,
-    name: "Cellecor Smart TV E-55Y (55 Inch)",
-    oldPrice: 34999,
-    newPrice: 25999,
-    discount: "25%",
     size: "55 Inch",
-    img: "https://picsum.photos/id/1150/300/200",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k6,
     images: [
-      "https://picsum.photos/id/1150/300/200",
-      "https://picsum.photos/id/1151/300/200",
-      "https://picsum.photos/id/1152/300/200",
+      tcom4k6,
+      detailscom4k,
+      remotcom,
+      view9tv,
+      backled,
     ],
-    category: "Television"
+    category: "Android LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
-    id: 16,
-    name: "Cellecor Smart TV E-60Y (60 Inch)",
-    oldPrice: 39999,
-    newPrice: 29990,
-    discount: "25%",
-    size: "60 Inch",
-    img: "https://picsum.photos/id/1160/300/200",
-    images: [
-      "https://picsum.photos/id/1160/300/200",
-      "https://picsum.photos/id/1161/300/200",
-      "https://picsum.photos/id/1162/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 17,
-    name: "Cellecor Smart TV E-65Y (65 Inch)",
-    oldPrice: 44999,
-    newPrice: 33990,
-    discount: "24%",
-    size: "65 Inch",
-    img: "https://picsum.photos/id/1170/300/200",
-    images: [
-      "https://picsum.photos/id/1170/300/200",
-      "https://picsum.photos/id/1171/300/200",
-      "https://picsum.photos/id/1172/300/200",
-    ],
-    category: "Television"
-  },
-  {
-    id: 18,
-    name: "Cellecor Smart TV E-70Y (70 Inch)",
+    id: 8,
+    name: "Red Wolf webOS LED TV(55 Inch)",
     oldPrice: 49999,
     newPrice: 37999,
     discount: "24%",
-    size: "70 Inch",
-    img: "https://picsum.photos/id/1180/300/200",
+    size: "55 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k1,
     images: [
-      "https://picsum.photos/id/1180/300/200",
-      "https://picsum.photos/id/1181/300/200",
-      "https://picsum.photos/id/1182/300/200",
+      tcom4k1,
+      detailscom4k,
+      remotcom,
+      view9tv,
+      backled,
     ],
-    category: "Television"
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
-    id: 19,
-    name: "Cellecor Smart TV E-75Y (75 Inch)",
+    id: 9,
+    name: "Red Wolf webOS LED TV(65 Inch)",
     oldPrice: 54999,
     newPrice: 40999,
     discount: "25%",
-    size: "75 Inch",
-    img: "https://picsum.photos/id/1190/300/200",
+    size: "65 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k2,
     images: [
-      "https://picsum.photos/id/1190/300/200",
-      "https://picsum.photos/id/1191/300/200",
-      "https://picsum.photos/id/1192/300/200",
+      tcom4k2,
+      detailscom4k,
+      remotcom,
+      view10tv,
+      backled,
     ],
-    category: "Television"
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
   {
-    id: 20,
-    name: "Cellecor Smart TV E-80Y (80 Inch)",
+    id: 10,
+    name: "Red Wolf webOS LED TV(75 Inch)",
     oldPrice: 59999,
     newPrice: 44999,
     discount: "25%",
-    size: "80 Inch",
-    img: "https://picsum.photos/id/1200/300/200",
+    size: "75 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k3,
     images: [
-      "https://picsum.photos/id/1200/300/200",
-      "https://picsum.photos/id/1201/300/200",
-      "https://picsum.photos/id/1202/300/200",
+      tcom4k3,
+      detailscom4k,
+      remotcom,
+      view11tv,
+      backled,
     ],
-    category: "Television"
-  }
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
+  },
+  {
+    id: 11,
+    name: "Red Wolf webOS LED TV(85 Inch)",
+    oldPrice: 15999,
+    newPrice: 11999,
+    discount: "25%",
+    size: "85 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k4,
+    images: [
+      tcom4k4,
+      detailscom4k,
+      remotcom,
+      view12tv,
+      backled,
+    ],
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
+  },
+  {
+    id: 12,
+    name: "Red Wolf webOS LED TV(98 Inch)",
+    oldPrice: 21999,
+    newPrice: 15999,
+    discount: "27%",
+    size: "98 Inch",
+    type: "LED",
+    height: "35 cm",
+    outputSound: "20W",
+    aux: "Yes",
+    img: tcom4k5,
+    images: [
+      tcom4k5,
+      detailscom4k,
+      remotcom,
+      view13tv,
+      backled,
+    ],
+    category: "webOS LED TV",
+    display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
+  },
 ];
 

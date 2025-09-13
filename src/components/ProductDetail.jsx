@@ -15,6 +15,13 @@ const ProductDetail = () => {
 
     if (!product) return <h2>Product not found!</h2>;
 
+    const handleAddToCart = () => {
+        const btn = document.querySelector(".cart-btn");
+        btn.classList.add("pulse");
+        setTimeout(() => btn.classList.remove("pulse"), 300);
+        alert("Product added to cart!"); // optional
+    };
+
     return (
         <div className="details-page">
             {/* ✅ Back Button */}
@@ -54,14 +61,16 @@ const ProductDetail = () => {
                     <p className="discount">Save {product.discount}</p>
 
                     <ul className="features">
-                        <li>✅ Premium sound quality</li>
-                        <li>✅ Long-lasting durability</li>
-                        <li>✅ Smart connectivity features</li>
-                        <li>✅ Compact & sleek design</li>
+                        {Object.entries(product).map(([key, value]) => {
+                            if (
+                                ["id", "name", "images", "oldPrice", "newPrice", "discount"].includes(key)
+                            ) return null;
+                            return <li key={key}>✅ {key.charAt(0).toUpperCase() + key.slice(1)}: {value}</li>;
+                        })}
                     </ul>
 
                     <div className="buttons">
-                        <button className="cart-btn">🛒 ADD TO CART</button>
+                        <button className="cart-btn" onClick={handleAddToCart}>🛒 ADD TO CART</button>
                         <button className="buy-btn">⚡ BUY NOW</button>
                     </div>
                 </div>

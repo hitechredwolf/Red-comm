@@ -11,6 +11,7 @@ import ChatBot from "./ChatBot";
 // import front from "./images/frontspeaker.jpeg"
 import Category from "./Category";
 import today from "./images/ordertoday.jpeg"
+import diwali from "../components/images/Diwali banner.jpg"
 import Best from "./Best"
 function Home() {
     return (
@@ -44,6 +45,10 @@ function Home() {
                 <Category />
                 {/* counter  */}
                 <Best/>
+
+                <div>
+                    <img src={diwali} className="d-block w-100" alt="..." />
+                </div>
 
                 <div>
                     <img src={today} className="d-block w-100" alt="..." />
