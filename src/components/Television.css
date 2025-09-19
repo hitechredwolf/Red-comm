@@ -1,399 +1,345 @@
-/* Page Layout */
+/* ================================
+   📺 Television Page Layout
+================================ */
 .television-page {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    background: #f8f9fa;
-    font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* gap: 20px;
+  padding: 20px; */
 }
 
 /* Back Button */
 .back-btn-wrapper {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .back-btn {
-    text-decoration: none;
-    background-color: #333;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: 0.3s;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
 }
 
 .back-btn:hover {
-    background-color: #555;
+  background: #444;
 }
 
-/* Filter Toggle Button */
+/* ================================
+   🔽 Filter Section
+================================ */
 .filter-toggle-btn {
-    display: none;
-    padding: 8px 16px;
-    margin-bottom: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
+  display: none;
+  margin: 15px 0;
+  padding: 10px 18px;
+  background: #373737;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.filter-toggle-btn:hover {
-    background-color: #0056b3;
-}
+/* .filter-toggle-btn:hover {
+  background: #171616;
+} */
 
-/* Filters */
 .filters {
-    flex: 1;
-    max-width: 220px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    height: 50%;
+  flex: 1;
+  max-width: 100%;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
 }
 
 .filters input,
 .filters select {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 8px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* Main Container */
+/* ================================
+   🖼️ Television Grid
+================================ */
 .television-container {
-    flex: 3;
-    min-width: 300px;
+  flex: 3;
+  min-width: 320px;
 }
 
 .television-title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-/* Grid Layout */
 .television-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
 }
 
-/* Flip Card */
+/* ================================
+   🔄 Flip Card Effect
+================================ */
 .flip-card {
-    background-color: transparent;
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-    /* desktop height */
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-/* Front & Back */
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
-    background: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
 }
 
+/* Front Side */
 .flip-card-front h3 {
-    margin: 10px 0 5px;
-    font-size: 16px;
+  margin: 12px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .flip-card-front .rating {
-    color: #f39c12;
-    font-weight: bold;
-}
-
-.flip-card-front .television-price {
-    margin: 5px 0 3px;
+  color: #f39c12;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .flip-card-front .old-price {
-    text-decoration: line-through;
-    color: #999;
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
 }
 
 .flip-card-front .new-price {
-    font-weight: bold;
-    color: #000;
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
 }
 
 .flip-card-front .television-discount {
-    color: #ff4d4f;
-    font-weight: bold;
-    margin-bottom: 5px;
+  color: #e50914;
+  font-weight: 600;
+  margin: 5px 0;
 }
 
+/* Back Side */
 .flip-card-back {
-    transform: rotateY(180deg);
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    gap: 15px;
-    /* spacing between category and buttons */
-    text-align: center;
+  transform: rotateY(180deg);
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
 }
 
 .category-label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    background-color: #f0f0f0;
-    padding: 6px 12px;
-    border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
-/* Badge */
+/* ================================
+   🏷️ Badge
+================================ */
 .badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 4px 8px;
-    font-size: 12px;
-    color: #fff;
-    border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 6px;
 }
 
 .badge.sale {
-    background: #ff4d4f;
+  background: #e50914;
 }
 
 .badge.new {
-    background: #28a745;
+  background: #28a745;
 }
 
-/* Buttons */
+/* ================================
+   🔘 Buttons
+================================ */
 .card-buttons {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    /* margin-top: auto; */
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
 }
 
 .cart-btn,
 .details-btn1 {
-    flex: 1;
-    max-width: 120px;
-    /* smaller width for subtle look */
-    padding: 8px 12px;
-    border-radius: 6px;
+  width: 100%;
+  max-width: 160px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  text-align: center;
 }
 
 .cart-btn {
-    background-color: #ff9900;
-    color: #fff;
+  background: #ff9900;
+  color: #fff;
 }
 
 .cart-btn:hover {
-    background-color: #cc7a00;
+  background: #cc7a00;
 }
 
 .details-btn1 {
-    background-color: #007bff;
-    color: #fff;
+  background: #007bff;
+  color: #fff;
 }
 
 .details-btn1:hover {
-    background-color: #0056b3;
+  background: #0056b3;
 }
 
-/* Image */
+/* ================================
+   🖼️ Images
+================================ */
 .television-image {
-    width: 100%;
-    height: auto;
-    max-height: 180px;
-    /* desktop max height */
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.3s;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
 .flip-card:hover .television-image {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.filter-toggle-btn {
-    order: 0;
-}
-
-/* Mobile Responsive Fix */
+/* ================================
+   📱 Responsive Design
+================================ */
 @media (max-width: 768px) {
+  .television-page {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-    .filter-toggle-btn {
-        display: block;
-        order: 2;
-        /* slick ke baad */
-        margin-top: 10px;
+  .filter-toggle-btn {
+    display: block;
+  }
 
-    }
+  .filters {
+    display: none;
+    margin-bottom: 15px;
+  }
 
-    .filters {
-        display: none;
-        margin-bottom: 15px;
-    }
+  .filters.open {
+    display: block;
+  }
 
-    .filters.open {
-        display: block;
-    }
+  .television-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .television-page {
-        flex-direction: column;
-    }
+  /* Disable flip effect for mobile */
+  .flip-card {
+    perspective: none;
+  }
 
-    /* Flip card inner: disable perspective for mobile for proper stacking */
-    .flip-card {
-        perspective: none;
-    }
+  .flip-card-inner {
+    transform: none !important;
+  }
 
-    .flip-card-inner {
-        transform: none !important;
-    }
+  .flip-card-front,
+  .flip-card-back {
+    position: relative;
+    height: auto;
+    width: 100%;
+    backface-visibility: visible;
+    margin-bottom: 12px;
+  }
 
-    /* Front & Back stacked vertically */
-    .flip-card-front,
-    .flip-card-back {
-        position: relative;
-        /* relative instead of absolute */
-        height: auto;
-        width: 100%;
-        backface-visibility: visible;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+  .flip-card-back {
+    display: none;
+  }
 
-    .flip-card .flip-card-back {
-        display: none;
-    }
+  .flip-card.mobile-open .flip-card-back {
+    display: flex;
+  }
 
-    .flip-card.mobile-open .flip-card-back {
-        display: flex;
-    }
+  .television-image {
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
 
-    .flip-card-back {
-        transform: none !important;
-        ;
-    }
-
-    .flip-card.mobile-open .flip-card-back {
-        display: flex;
-    }
-
-    /* Image adjustments */
-    .television-image {
-        max-height: none;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        margin-bottom: 10px;
-    }
-
-    /* Buttons full width on mobile */
-    .card-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .television-container {
-        width: 100% !important;
-        max-width: 400px !important;
-    }
-
-    .cart-btn,
-    .details-btn1 {
-        width: 100%;
-    }
-
-    /* Grid spacing smaller */
-    .television-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  .card-buttons {
+    width: 100%;
+  }
 }
 
-
-
-
-
-/* Banner Slider */
+/* ================================
+   🎞️ Banner Slider
+================================ */
 .banner-slider {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .banner-slider img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    /* desktop ke liye */
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  /* border-radius: 10px; */
 }
 
-/* Tablet */
 @media (max-width: 768px) {
-    .banner-slider img {
-        max-height: 250px;
-    }
-
-    /* .banner-slider {
-        order: 1;
-        
-    } */
+  .banner-slider img {
+    max-height: 250px;
+  }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
-    .banner-slider img {
-        max-height: 180px;
-    }
-}
-
-.slick-slide div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slick-slide img {
-    width: 100%;
-    height: auto;
+  .banner-slider img {
+    max-height: 180px;
+  }
 }

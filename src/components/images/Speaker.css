@@ -1,6 +1,6 @@
 /* General Page Setup */
 .speaker-page {
-  /* padding: 20px; */
+  padding: 20px;
   font-family: 'Poppins', sans-serif;
   background: #f4f6f9;
   min-height: 100vh;
@@ -14,8 +14,7 @@
   border: none;
   cursor: pointer;
   border-radius: 6px;
-  margin: 10px;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -25,36 +24,13 @@
   transform: translateY(-2px);
 }
 
-
-
-
-
-
-/* Banner Slider */
-.banner-slider {
-    width: 100%;
-    margin-bottom: 20px;
-    /* border-radius: 10px; */
-    overflow: hidden;
-}
-
-.banner-slider img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    /* desktop ke liye */
-    /* object-fit: cover; */
-    /* border-radius: 10px; */
-    display: block;
-}
-
 /* Banner */
-/* .banner-slider img {
+.banner-slider img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-} */
+}
 
 /* Show Filters Button for Mobile */
 .show-filters-btn {
@@ -350,20 +326,4 @@
   .mobile-dropdown {
     display: block;
   }
-}
-.off-price {
-    color: #cc111a;
-    /* Red color to highlight discount */
-    font-size: 16px;
-    /* Clear and readable size */
-    font-weight: bold;
-    /* Make it stand out */
-    margin-top: 8px;
-    /* Space from other elements */
-    text-decoration: line-through;
-    /* Show it’s a slashed/original price */
-    opacity: 0.7;
-    /* Slightly faded */
-    font-family: var(--ff-dm-sans), sans-serif;
-    /* Consistent typography */
 }

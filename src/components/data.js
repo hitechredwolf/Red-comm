@@ -1,12 +1,9 @@
-// banners images speakers and television's
-
-import banner1 from "../components/images/tagline.jpeg";
-import banner2 from "../components/images/smt32.jpeg";
-import banner3 from "../components/images/smtspkr.jpeg";
-import banner4 from "../components/images/banner1.png";
-import banner5 from "../components/images/banner1.png";
-import banner6 from "../components/images/banner1.png";
-
+import banner1 from "../components/images/Speaker banner1.jpg";
+import banner2 from "../components/images/Speaker Banner 2.jpg";
+import banner3 from "../components/images/Speaker banner3.jpg";
+import banner4 from "../components/images/Festival Electronics Banner.jpg";
+import banner5 from "../components/images/LED TV Slider.jpg";
+import banner6 from "../components/images/LED TV Slider2.jpg";
 
 
 
@@ -25,6 +22,15 @@ import m11 from "../components/images/New Wave 200.jpg";
 import m12 from "../components/images/Pulse Box.jpg";
 import m13 from "../components/images/Remot.jpg";
 import m14 from "../components/images/feturs.jpg";
+
+import m15 from "../components/images/m15.jpg";
+
+
+
+
+
+
+
 
 
 
@@ -57,33 +63,27 @@ import view11tv from "../components/images/11.jpg"
 import view12tv from "../components/images/12.jpg"
 
 
-
-
-
-
-
-
-
-// Banner images array
+// Banner images array for speaker 
 export const banners = [banner1, banner2, banner3];
-
-// Speaker products array
 //LUCKY
 // Speaker products array
 export const speakers = [
-  {
+
+
+{
     id: 1,
     name: "Classic & Brass",
     price: 120,
+    off: "₹20 off",
     category: "Portable",
     image: m1,
-    image1: m2,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
       type: "Portable Rechargeable Trolley Sound System",
-      outputSound: "12 Watt",
       speakerSize: "4 inches x 4 inches",
+      outputSound: "12 Watt",
       adaptor: "5 Volt (Type-C)",
       battery: "2600 mAh Li-ion Battery",
       height: "20 Inches",
@@ -91,16 +91,18 @@ export const speakers = [
       auxConnection: "Yes",
       productHeight: "24 Inches",
       backup: "4+ Hours",
-      warranty: "No Warranty"
+      warranty: "No Warranty",
+      features: ["Karaoke Support", "Wired Mic and Remote"]
     }
   },
   {
     id: 2,
     name: "Harmony X",
     price: 150,
+    off: "₹25 off",
     category: "Portable",
     image: m2,
-    image1: m2,
+   image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -116,16 +118,18 @@ export const speakers = [
       woodenThickness: "7 MM",
       woodenType: "MDF",
       wirelessMicAddOn: "Available",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Karaoke Support", "Wireless Pairing of Two Sets"]
     }
   },
   {
     id: 3,
     name: "Funk",
     price: 200,
+    off: "₹30 off",
     category: "Home",
     image: m3,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -138,17 +142,18 @@ export const speakers = [
       remoteControl: "Yes",
       productHeight: "24 Inches",
       volumeControl: "Rotary Type",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Karaoke Support", "Wired Mic and Remote", "Support: USB, AUX, MIC", "Bluetooth 5.0"]
     }
   },
-  //LUCKY
   {
     id: 4,
     name: "Sonic80",
     price: 90,
+    off: "₹10 off",
     category: "Portable",
     image: m4,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -171,9 +176,10 @@ export const speakers = [
     id: 5,
     name: "Trance Jr",
     price: 300,
+    off: "₹50 off",
     category: "Home",
     image: m5,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -186,16 +192,18 @@ export const speakers = [
       multiModeRGBLight: "Yes",
       productHeight: "18.5 Inches",
       volumeControl: "Rotary Type",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Karaoke Support", "Wireless Mic", "Support: USB, AUX, MIC"]
     }
   },
   {
     id: 6,
     name: "Sonic 200",
     price: 250,
+    off: "₹40 off",
     category: "Car",
     image: m6,
-    image1: m2,
+   image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -207,17 +215,18 @@ export const speakers = [
       remoteControl: "Yes",
       productHeight: "25 Inches",
       volumeControl: "Rotary Type",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Wireless Mic", "Support: USB, AUX, MIC"]
     }
   },
-  //LUCKY
   {
     id: 7,
     name: "New Wave 100",
     price: 180,
+    off: "₹20 off",
     category: "Home",
     image: m7,
-    image1: m2,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -230,16 +239,18 @@ export const speakers = [
       productHeight: "38 Inches",
       bassControl: "Rotary Type",
       wirelessMicAddOn: "With Remote",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "Support: USB, FM, AUX, MIC", "Support: Karaoke"]
     }
   },
   {
     id: 8,
     name: "K-POP",
     price: 220,
+    off: "₹35 off",
     category: "Car",
     image: m8,
-    image1: m2,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -255,17 +266,18 @@ export const speakers = [
       woodenThickness: "11 MM",
       woodenType: "MDF",
       wirelessMicAddOn: "Available",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Karaoke Support", "Wireless Pairing of Two Sets"]
     }
   },
-  //LUCKY
   {
     id: 9,
     name: "Rock & Roll",
     price: 130,
+    off: "₹15 off",
     category: "Portable",
     image: m9,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -282,16 +294,18 @@ export const speakers = [
       guitarInSlot: "Yes",
       ledDisplay: "Big Information LED Display",
       rgbLightModes: "8 Modes",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "Karaoke Support", "Wireless Mic", "Support: USB, AUX, MIC"]
     }
   },
   {
     id: 10,
     name: "Trance",
     price: 400,
+    off: "₹60 off",
     category: "Home",
     image: m10,
-    image1: m2,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -304,17 +318,18 @@ export const speakers = [
       rgbLight: "Programmed RGB Light",
       productHeight: "36 Inches",
       volumeControl: "Rotary Type",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Karaoke Support", "Wireless Mic and Remote", "Support: USB, AUX, MIC", "Bluetooth 5.0"]
     }
   },
-  //LUCKY
   {
     id: 11,
     name: "New Wave 200",
     price: 350,
+    off: "₹45 off",
     category: "Car",
     image: m11,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -327,16 +342,18 @@ export const speakers = [
       volumeControl: "Rotary Type",
       wirelessMicAddOn: "With Remote",
       rgbLightModes: "Multi Mode",
-      warranty: "6 Months Warranty"
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Wireless Mic", "Support: USB, FM, AUX, MIC"]
     }
   },
   {
     id: 12,
     name: "Pulse Box",
     price: 275,
+    off: "₹30 off",
     category: "Home",
     image: m12,
-    image1: m2,
+     image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -345,66 +362,326 @@ export const speakers = [
       wooferSize: "10 Inches x 2 Pcs",
       speakerSize: "4 inches x 2 Pcs",
       controlType: "Rotary",
-      wirelessMic: true,
-      bluetoothConnectivity: true,
-      auxConnection: true,
+      wirelessMic: "Yes",
+      bluetoothConnectivity: "Yes",
+      auxConnection: "Yes",
       productHeight: "36 Inches",
       woodenThickness: "11 MM",
       woodenType: "MDF",
-      wirelessMicAddOn: true,
-      warranty: "6 Months Warranty"
+      wirelessMicAddOn: "Available",
+      warranty: "6 Months Warranty",
+      features: ["Bluetooth 5.0", "FM Support", "Karaoke Support", "Wireless Mic", "Wireless Pairing of Two Sets"]
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // {
+  //   id: 1,
+  //   name: "Classic & Brass",
+  //   price: 120,
+  //   off: "₹20 off",
+  //   category: "Portable",
+  //   image: m1,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Portable Rechargeable Trolley Sound System",
+  //     outputSound: "12 Watt",
+  //     speakerSize: "4 inches x 4 inches",
+  //     adaptor: "5 Volt (Type-C)",
+  //     battery: "2600 mAh Li-ion Battery",
+  //     height: "20 Inches",
+  //     support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+  //     auxConnection: "Yes",
+  //     productHeight: "24 Inches",
+  //     backup: "4+ Hours",
+  //     warranty: "No Warranty"
+  //   }
+  // },
+  // {
+  //   id: 2,
+  //   name: "Harmony X",
+  //   price: 150,
+  //   off: "₹25 off",
+  //   category: "Portable",
+  //   image: m2,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     outputSound: "60 Watt RMS",
+  //     wooferSize: "5.25 Inches",
+  //     speakerSize: "3 inches x 2 Pcs",
+  //     controlType: "Rotary",
+  //     wireMicSocket: "Available",
+  //     bluetoothConnectivity: "Yes",
+  //     auxConnection: "Yes",
+  //     productHeight: "24 Inches",
+  //     woodenThickness: "7 MM",
+  //     woodenType: "MDF",
+  //     wirelessMicAddOn: "Available",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 3,
+  //   name: "Funk",
+  //   price: 200,
+  //   off: "₹30 off",
+  //   category: "Home",
+  //   image: m3,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     powerOutput: "50W RMS",
+  //     speakerSize: "3 inches x 2",
+  //     wooferSize: "5.25 Inches",
+  //     bassControl: "Rotary Type",
+  //     wiredMic: "Included",
+  //     remoteControl: "Yes",
+  //     productHeight: "24 Inches",
+  //     volumeControl: "Rotary Type",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 4,
+  //   name: "Sonic80",
+  //   price: 90,
+  //   off: "₹10 off",
+  //   category: "Portable",
+  //   image: m4,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     outputSound: "60 Watt RMS",
+  //     wooferSize: "5.25 Inches",
+  //     speakerSize: "3 inches x 2 Pcs",
+  //     controlType: "Rotary",
+  //     wireMicSocket: "Available",
+  //     bluetoothConnectivity: "Yes",
+  //     auxConnection: "Yes",
+  //     productHeight: "24 Inches",
+  //     woodenThickness: "7 MM",
+  //     woodenType: "MDF",
+  //     wirelessMicAddOn: "Available",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 5,
+  //   name: "Trance Jr",
+  //   price: 300,
+  //   off: "₹50 off",
+  //   category: "Home",
+  //   image: m5,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     powerOutput: "90W RMS",
+  //     speakerSize: "4 inches x 2 Pcs",
+  //     wooferSize: "8 Inches x 1 Piece",
+  //     bassControl: "Rotary Type",
+  //     tweeterSize: "4 Inches",
+  //     multiModeRGBLight: "Yes",
+  //     productHeight: "18.5 Inches",
+  //     volumeControl: "Rotary Type",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 6,
+  //   name: "Sonic 200",
+  //   price: 250,
+  //   off: "₹40 off",
+  //   category: "Car",
+  //   image: m6,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     powerOutput: "120W RMS",
+  //     speakerSize: "4 inches x 2 Pcs",
+  //     wooferSize: "8 Inches x 2 Pcs",
+  //     bassControl: "Rotary Type",
+  //     remoteControl: "Yes",
+  //     productHeight: "25 Inches",
+  //     volumeControl: "Rotary Type",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 7,
+  //   name: "New Wave 100",
+  //   price: 180,
+  //   off: "₹20 off",
+  //   category: "Home",
+  //   image: m7,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier Based On IC 7294",
+  //     powerOutput: "130 Watt RMS",
+  //     wooferSize: "8 Inches x 2 Pcs",
+  //     speakerSize: "4 Inches",
+  //     controlType: "Rotary",
+  //     tweeterSize: "4 Inches",
+  //     productHeight: "38 Inches",
+  //     bassControl: "Rotary Type",
+  //     wirelessMicAddOn: "With Remote",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 8,
+  //   name: "K-POP",
+  //   price: 220,
+  //   off: "₹35 off",
+  //   category: "Car",
+  //   image: m8,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     outputSound: "175 Watt RMS",
+  //     wooferSize: "10 Inches",
+  //     speakerSize: "4 Inches x 2 Pcs",
+  //     controlType: "Rotary",
+  //     tweeterSize: "2.5 Inches",
+  //     bluetoothConnectivity: "Yes",
+  //     auxConnection: "Yes",
+  //     productHeight: "36 Inches",
+  //     woodenThickness: "11 MM",
+  //     woodenType: "MDF",
+  //     wirelessMicAddOn: "Available",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 9,
+  //   name: "Rock & Roll",
+  //   price: 130,
+  //   off: "₹15 off",
+  //   category: "Portable",
+  //   image: m9,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class D Amplifier with High Bass Performance",
+  //     outputSound: "60 Watt RMS",
+  //     wooferSize: "8 Inches x 2 Pcs",
+  //     battery: "10400 mAh 10 Amp",
+  //     volumeControl: "Rotary Type",
+  //     wirelessMic: "Yes",
+  //     backup: "Up to 5 Hrs",
+  //     soundEqualizer: "Manual",
+  //     inputPower: "9V DC",
+  //     micInSlot: "Yes",
+  //     guitarInSlot: "Yes",
+  //     ledDisplay: "Big Information LED Display",
+  //     rgbLightModes: "8 Modes",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 10,
+  //   name: "Trance",
+  //   price: 400,
+  //   off: "₹60 off",
+  //   category: "Home",
+  //   image: m10,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier Based On IC 7294 with High Bass Performance",
+  //     powerOutput: "150W RMS",
+  //     speakerSize: "4 inches x 2 Pcs",
+  //     wooferSize: "8 Inches x 2 Pcs",
+  //     bassControl: "Rotary Type",
+  //     tweeterSize: "4 Inches x 2 Pcs",
+  //     rgbLight: "Programmed RGB Light",
+  //     productHeight: "36 Inches",
+  //     volumeControl: "Rotary Type",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 11,
+  //   name: "New Wave 200",
+  //   price: 350,
+  //   off: "₹45 off",
+  //   category: "Car",
+  //   image: m11,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     powerOutput: "150 Watt RMS",
+  //     wooferSize: "8 Inches x 2 Bass",
+  //     speakerSize: "4 Inches x 4",
+  //     controlType: "Rotary",
+  //     productHeight: "32 Inches",
+  //     volumeControl: "Rotary Type",
+  //     wirelessMicAddOn: "With Remote",
+  //     rgbLightModes: "Multi Mode",
+  //     warranty: "6 Months Warranty"
+  //   }
+  // },
+  // {
+  //   id: 12,
+  //   name: "Pulse Box",
+  //   price: 275,
+  //   off: "₹30 off",
+  //   category: "Home",
+  //   image: m12,
+  //   image1: m2,
+  //   image2: m13,
+  //   image3: m14,
+  //   specifications: {
+  //     type: "Class AB Amplifier with High Bass Performance",
+  //     powerOutput: "250 Watt RMS",
+  //     wooferSize: "10 Inches x 2 Pcs",
+  //     speakerSize: "4 inches x 2 Pcs",
+  //     controlType: "Rotary",
+  //     wirelessMic: true,
+  //     bluetoothConnectivity: true,
+  //     auxConnection: true,
+  //     productHeight: "36 Inches",
+  //     woodenThickness: "11 MM",
+  //     woodenType: "MDF",
+  //     wirelessMicAddOn: true,
+  //     warranty: "6 Months Warranty"
+  //   }
+  // }
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------- Televisions Data ----------------
-
-// import tvbanner1 from "../components/images/tagline.jpeg";
-// import tvbanner2 from "../components/images/smt32.jpeg";
-// import tvbanner3 from "../components/images/smtspkr.jpeg";
-
-
-
-// export const tvbanners = [banner1, banner2, banner3];
-
-
-// src/components/data.js
-
-
-
-
 
 
 
@@ -683,4 +960,325 @@ export const televisions = [
     display: "LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Banner images array
+// export const banners = [banner1, banner2, banner3];
+
+// Speaker products array
+// export const speakers = [
+//   {
+//     id: 1,
+//     name: "Classic & Brass",
+//     price: 120,
+//     category: "Portable",
+//     image: m1,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 2,
+//     name: "Harmony X",
+//     price: 150,
+//     category: "Portable",
+//     image: m2,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 3,
+//     name: "Funk",
+//     price: 200,
+//     category: "Home",
+//     image: m3,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 4,
+//     name: "Sonic80",
+//     price: 90,
+//     category: "Portable",
+//     image: m4,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 5,
+//     name: "Trance Jr",
+//     price: 300,
+//     category: "Home",
+//     image: m5,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 6,
+//     name: "Sonic 200",
+//     price: 250,
+//     category: "Car",
+//     image: m6,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 7,
+//     name: "New Wave 100",
+//     price: 180,
+//     category: "Home",
+//     image: m7,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 8,
+//     name: "K-POP",
+//     price: 220,
+//     category: "Car",
+//     image: m8,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 9,
+//     name: "Rock & Roll",
+//     price: 130,
+//     category: "Portable",
+//     image: m9,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 10,
+//     name: "Trance",
+//     price: 400,
+//     category: "Home",
+//     image: m10,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 11,
+//     name: "New Wave 200",
+//     price: 350,
+//     category: "Car",
+//     image: m11,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   },
+//   {
+//     id: 12,
+//     name: "Pulse Box",
+//     price: 275,
+//     category: "Home",
+//     image: m12,
+//     image1: m2,
+//     image2: m3,
+//     image3: m4,
+//     specifications: {
+//       type: "Portable Rechargeable Trolley Sound System",
+//       outputSound: "12 Watt",
+//       speakerSize: "4 inches x 4 inches",
+//       adaptor: "5 Volt (Type-C)",
+//       battery: "2600 mAh Li-ion Battery",
+//       height: "20 Inches",
+//       support: ["USB", "TFLASH", "FM", "AUX", "MIC"],
+//       auxConnection: true,
+//       productHeight: "24 Inches",
+//       backup: "4+ Hours"
+//     }
+//   }
+// ];
+
+
+
+
+
+
+
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import bannerImage from "./images/Coming soon.jpg"
+import bannerImage from "./images/More.jpeg"
 
 function AirConditioner() {
   return (

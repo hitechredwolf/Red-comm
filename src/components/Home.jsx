@@ -4,13 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import './Home.css';
-import Tagline from "./images/tagline.jpeg";
-import smtspkr from "./images/smtspkr.jpeg";
-import smt32 from "./images/smt32.jpeg"
+import Tagline from "./images/tagline.jpg";
+import smtspkr from "./images/smtspkr.jpg";
+import smt32 from "./images/smt32.jpg"
 import ChatBot from "./ChatBot";
 // import front from "./images/frontspeaker.jpeg"
 import Category from "./Category";
-import today from "./images/ordertoday.jpeg"
+import today from "./images/ordertoday.jpg"
 import diwali from "../components/images/Diwali banner.jpg"
 import Best from "./Best"
 function Home() {

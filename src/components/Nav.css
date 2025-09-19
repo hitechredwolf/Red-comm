@@ -349,3 +349,94 @@ body.dark-mode {
 .dark-toggle:hover {
     transform: scale(1.1);
 }
+
+/* Wishlist Icon Container */
+.wishlist-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Heart Icon */
+
+
+/* .wishlist-icon .icon {
+    font-size: 1.5rem;
+    color: #e74c3c; 
+} */
+
+/* Wishlist Count Badge */
+.wishlist-icon .wishlist-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #e74c3c; /* Red background */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Optional: Add hover effect */
+.wishlist-icon:hover .icon {
+   color: #5c4bca; ;
+}
+/* Cart Icon Wrapper */
+.cart-wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.cart-wrapper .icon {
+  font-size: 1.5rem;
+  color: #fff; /* Adjust based on your theme */
+  transition: color 0.3s;
+}
+
+.cart-wrapper:hover .icon {
+  color: #5c4bca; /* Optional hover effect */
+}
+
+/* Cart Count Badge */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff3b3b;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* So clicking the badge still triggers the cart click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Make it match wishlist badge */
+.wishlist-icon, .cart-wrapper {
+  position: relative;
+}
+
+.wishlist-count, .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff3b3b;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}

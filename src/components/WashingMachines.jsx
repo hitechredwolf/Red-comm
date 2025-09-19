@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "./images/More.jpeg"
+import bannerImage from "./images/Coming soon.jpg"
 function WashingMachines() {
   return (
     <div className="banner-image">

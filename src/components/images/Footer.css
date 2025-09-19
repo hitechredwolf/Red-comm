@@ -105,7 +105,10 @@ body {
 }
 
 .header {
-  
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; */
     background: linear-gradient(to right, #000000, #8a0000);
 
 }
@@ -118,7 +121,12 @@ body {
     color: #ffffff;
 }
 
-
+/* .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  } */
 
 .logo {
     width: 120px;
@@ -154,7 +162,19 @@ body {
     cursor: pointer;
 }
 
-
+.nav ul li:hover {
+    margin: 0 15px;
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow for 3D effect */
+    border-radius: 8px;
+    /* Slightly more rounded corners on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
 
 .nav ul li a {
     text-decoration: none;
