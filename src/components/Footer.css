@@ -336,29 +336,29 @@ footer .content .top {
 }
 
 .top .media-icons a:nth-child(2) {
-    background: #1DA1F2;
+    background: #e23865;
 }
 
 .top .media-icons a:nth-child(2):hover {
-    color: #1DA1F2;
+    color: #e23865;
     background: #fff;
 }
 
 .top .media-icons a:nth-child(3) {
-    background: #E1306C;
+    background: #3a94ff;
 }
 
 .top .media-icons a:nth-child(3):hover {
-    color: #E1306C;
+    color: #3a94ff;
     background: #fff;
 }
 
 .top .media-icons a:nth-child(4) {
-    background: #0077B5;
+    background: #FF0000;
 }
 
 .top .media-icons a:nth-child(4):hover {
-    color: #0077B5;
+    color: #FF0000;
     background: #fff;
 }
 

@@ -43,12 +43,17 @@ function Home() {
                     </button>
                 </div>
                 <Category />
-                {/* counter  */}
-                <Best/>
+
 
                 <div>
                     <img src={diwali} className="d-block w-100" alt="..." />
                 </div>
+
+                
+                {/* counter  */}
+                <Best />
+
+
 
                 <div>
                     <img src={today} className="d-block w-100" alt="..." />

@@ -70,7 +70,7 @@ export const banners = [banner1, banner2, banner3];
 export const speakers = [
 
 
-{
+  {
     id: 1,
     name: "Classic & Brass",
     price: 120,
@@ -102,7 +102,7 @@ export const speakers = [
     off: "₹25 off",
     category: "Portable",
     image: m2,
-   image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -129,7 +129,7 @@ export const speakers = [
     off: "₹30 off",
     category: "Home",
     image: m3,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -153,7 +153,7 @@ export const speakers = [
     off: "₹10 off",
     category: "Portable",
     image: m4,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -179,7 +179,7 @@ export const speakers = [
     off: "₹50 off",
     category: "Home",
     image: m5,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -203,7 +203,7 @@ export const speakers = [
     off: "₹40 off",
     category: "Car",
     image: m6,
-   image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -277,7 +277,7 @@ export const speakers = [
     off: "₹15 off",
     category: "Portable",
     image: m9,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -329,7 +329,7 @@ export const speakers = [
     off: "₹45 off",
     category: "Car",
     image: m11,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -353,7 +353,7 @@ export const speakers = [
     off: "₹30 off",
     category: "Home",
     image: m12,
-     image1: m15,
+    image1: m15,
     image2: m13,
     image3: m14,
     specifications: {
@@ -1274,6 +1274,19 @@ export const televisions = [
 //     }
 //   }
 // ];
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

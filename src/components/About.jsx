@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+// src/components/About.jsx
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./About.css";
-// import { FaLock, FaTv, FaVolumeUp } from "react-icons/fa";
-import bannerImage from "./images/About baner.jpg"; // Adjust path based on your structure
 
-import Catagories from "./images/productcat.png"
-import vibrant from "./images/vibrant-0513-3.webp"
-import Innovative from "./images/innovative-0513-3.webp"
-import Fashionablee from "./images/fashionable-0513-3.webp"
-import Premium from "./images/premium-0513-3.webp"
+// Banner
+import bannerImage from "./images/About baner.jpg";
 
-// import EventSection from "../components/";
+// Categories images
+import tvImg from "./images/smartledlogo.jpg";
+import soundbarImg from "./images/speaker-logo.avif";
+import acImg from "./images/conditionerlogo.jpg";
+import washingImg from "./images/machinlogo.jpg";
 
+// Attributes
+import vibrant from "./images/vibrant-0513-3.webp";
+import Innovative from "./images/innovative-0513-3.webp";
+import Fashionablee from "./images/fashionable-0513-3.webp";
+import Premium from "./images/premium-0513-3.webp";
 
-// Image imports (adjust paths as per your structure)
+// Events images
 import imgA1 from "./images/AGM1.jpg";
 import imgA2 from "./images/AGM10.jpeg";
 import imgA3 from "./images/AGM11.jpeg";
@@ -53,78 +59,86 @@ const eventsData = [
     {
         id: 1,
         title: "Annual General Meeting (2023–2024)",
-        cover: imgA1,
+        cover: imgA6,
         images: [imgA1, imgA2, imgA3, imgA4, imgA5, imgA6, imgA7, imgA8],
     },
     {
         id: 2,
         title: "Redwolf EV Launching",
-        cover: imgB1,
+        cover: imgB5,
         images: [imgB1, imgB2, imgB3, imgB4, imgB5, imgB6, imgB7, imgB8],
     },
     {
         id: 3,
         title: "Annual General Meeting (2024–2025)",
-        cover: imgC1,
+        cover: imgC3,
         images: [imgC1, imgC2, imgC3, imgC4, imgC5, imgC6, imgC7, imgC8],
     },
     {
         id: 4,
         title: "R&R",
-        cover: imgD1,
+        cover: imgD8,
         images: [imgD1, imgD2, imgD3, imgD4, imgD5, imgD6, imgD7, imgD8],
+    },
+];
+
+const brandData = [
+    {
+        title: "Vibrant",
+        img: vibrant,
+        heading: "VIBRANT",
+        desc: "To spark curiosity, lead with energy, and bring boldness to every innovation we create.",
+    },
+    {
+        title: "Innovative",
+        img: Innovative,
+        heading: "INNOVATIVE",
+        desc: "To challenge convention and craft intelligent, future-ready solutions that redefine everyday experiences.",
+    },
+    {
+        title: "Fashionable",
+        img: Fashionablee,
+        heading: "FASHIONABLE",
+        desc: "To fuse modern design with smart tech — delivering style, sophistication, and performance in every product.",
+    },
+    {
+        title: "Premium",
+        img: Premium,
+        heading: "PREMIUM",
+        desc: "To uphold superior quality, thoughtful design, and a seamless experience across everything we build.",
     },
 ];
 
 const About = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
-    const brandData = [
-        {
-            title: "Vibrant",
-            img: vibrant,
-            heading: "VIBRANT",
-            desc: "To spark curiosity, lead with energy, and bring boldness to every innovation we create.",
-        },
-        {
-            title: "Innovative",
-            img: Innovative,
-            heading: "INNOVATIVE",
-            desc: "To challenge convention and craft intelligent, future-ready solutions that redefine everyday experiences.",
-        },
-        {
-            title: "Fashionable",
-            img: Fashionablee,
-            heading: "FASHIONABLE",
-            desc: "To fuse modern design with smart tech — delivering style, sophistication, and performance in every product.",
-        },
-        {
-            title: "Premium",
-            img: Premium,
-            heading: "PREMIUM",
-            desc: "To uphold superior quality, thoughtful design, and a seamless experience across everything we build.",
-        },
+    const navigate = useNavigate();
+
+    // Category data
+    const categories = [
+        { title: "Television", img: tvImg, route: "/television" },
+        { title: "Soundbar", img: soundbarImg, route: "/speaker" },
+        { title: "Air Conditioner", img: acImg, route: "/airconditioner" },
+        { title: "Washing Machine", img: washingImg, route: "/washingmachine" },
     ];
-
-
 
     return (
         <div className="about-container">
+            {/* Banner */}
             <div className="banner-image">
                 <img src={bannerImage} alt="About Banner" className="banner-img" />
-
             </div>
 
-
+            {/* Journey Section */}
             <section className="section">
                 <h2 className="section-title">Our Journey of Innovation</h2>
                 <div className="card-grid">
                     <div className="card animate-fade-in">
                         <h3>Early Innovation</h3>
                         <p>
-                            We began by addressing a critical gap in mobile EMI management with
-                            the launch of TCOPS Finance Locker, a powerful platform designed to
-                            protect financial assets through secure, scalable mobile control
-                            solutions.
+                            We began by addressing a critical gap in mobile EMI management
+                            with the launch of TCOPS Finance Locker, a powerful platform
+                            designed to protect financial assets through secure, scalable
+                            mobile control solutions.
                         </p>
                     </div>
                     <div className="card animate-fade-in">
@@ -137,68 +151,70 @@ const About = () => {
                     <div className="card animate-fade-in">
                         <h3>Trust Across Verticals</h3>
                         <p>
-                            With over 500,000+ users, Redwolf Info Tech has earned a reputation
-                            for excellence in security, visual innovation, and sound performance.
+                            With over 500,000+ users, Redwolf Info Tech has earned a
+                            reputation for excellence in security, visual innovation, and
+                            sound performance.
                         </p>
                     </div>
                 </div>
             </section>
+
+            {/* Mission & Vision */}
             <section className="rw-mission-vision">
                 <div className="rw-split-container">
-                    {/* Vision Section */}
                     <div className="rw-box rw-vision">
                         <h2 className="rw-heading">🌟 Vision Statement</h2>
                         <p>
-                            To be India’s most trusted innovation-driven brand, delivering smart lifestyle solutions that seamlessly blend
-                            technology, sustainability, and everyday convenience.
+                            To be India’s most trusted innovation-driven brand, delivering
+                            smart lifestyle solutions that seamlessly blend technology,
+                            sustainability, and everyday convenience.
                         </p>
-                        <p>
-                            We envision a future where every Indian home and journey is empowered by intelligent Red Wolf products —
-                            designed to simplify life, amplify experiences, and shape a smarter tomorrow.
-                        </p>
-                        <h4 className="rw-subheading">Our Vision Focuses On:</h4>
                         <ul>
                             <li>🚗 Sustainable Mobility through smart, future-ready EVs</li>
                             <li>📺 Connected Living with immersive LED TVs & Speakers</li>
-                            <li>📱 Digital Empowerment via powerful finance tools like EMI Locker</li>
-                            <li>🏠 Smart Home Expansion with intuitive appliances (coming soon)</li>
+                            <li>📱 Digital Empowerment via finance tools like EMI Locker</li>
+                            <li>🏠 Smart Home Expansion with intuitive appliances</li>
                             <li>🇮🇳 Making Innovation Accessible for every Indian household</li>
                         </ul>
                     </div>
 
-                    {/* Mission Section */}
                     <div className="rw-box rw-mission">
                         <h2 className="rw-heading">🚀 Mission Statement</h2>
                         <p>
-                            At Red Wolf Info Tech, our mission is to reimagine the way India moves, connects, and manages daily life through
-                            purposeful innovation.
+                            At Red Wolf Info Tech, our mission is to reimagine the way India
+                            moves, connects, and manages daily life through purposeful
+                            innovation.
                         </p>
-                        <p>
-                            We deliver solutions that blend design, performance, and reliability across mobility, entertainment, and finance
-                            — built to serve real needs in real time.
-                        </p>
-                        <h4 className="rw-subheading">Our Mission Drives Us To:</h4>
                         <ul>
-                            <li>⚡ Build eco-friendly electric vehicles for tomorrow’s roads</li>
-                            <li>🔊 Deliver high-quality audio-visual products for modern entertainment</li>
-                            <li>📊 Create intuitive finance management tools for digital-savvy users</li>
-                            <li>🧠 Launch future-ready smart appliances for everyday comfort</li>
+                            <li>⚡ Build eco-friendly electric vehicles</li>
+                            <li>🔊 Deliver high-quality audio-visual products</li>
+                            <li>📊 Create intuitive finance management tools</li>
+                            <li>🧠 Launch future-ready smart appliances</li>
                             <li>🛠️ Lead with trust, technology, and customer-first thinking</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-
-
-
-
-
-
-
-            <section>
-                <img src={Catagories} alt="catagories" style={{ width: '100%' }} />
+            {/* Categories */}
+            <section className="section">
+                <h2 className="section-title">Our Product Categories</h2>
+                <div className="card-grid">
+                    {categories.map((cat, idx) => (
+                        <div
+                            key={idx}
+                            className="brand-card categories-img"
+                            onClick={() => navigate(cat.route)}
+                            style={{ cursor: "pointer" }}
+                        >
+                            <img src={cat.img} alt={cat.title} />
+                            <div className="overlay-text">{cat.title}</div>
+                        </div>
+                    ))}
+                </div>
             </section>
+
+            {/* Why Redwolf */}
             <section className="section white-bg">
                 <h2 className="section-title">Why Redwolf?</h2>
                 <ul className="benefits-list">
@@ -213,8 +229,7 @@ const About = () => {
                 </p>
             </section>
 
-            {/* ATTRIBUTES */}
-
+            {/* Attributes */}
             <div className="brand-attributes-container">
                 <h2 className="brand-title">Red Wolf Attributes</h2>
                 <div className="brand-cards">
@@ -231,10 +246,9 @@ const About = () => {
                 </div>
             </div>
 
-
+            {/* Events */}
             <div className="event-section">
                 <h2 className="section-title">Our Events</h2>
-
                 <div className="card-container">
                     {eventsData.map((event) => (
                         <div
@@ -242,19 +256,29 @@ const About = () => {
                             className="event-card"
                             onClick={() => setSelectedEvent(event)}
                         >
-                            <img src={event.cover} alt="event-thumbnail" className="card-img" />
+                            <img
+                                src={event.cover}
+                                alt="event-thumbnail"
+                                className="card-img"
+                            />
                             <h3>{event.title}</h3>
                         </div>
                     ))}
                 </div>
 
                 {selectedEvent && (
-                    <div className="modal-overlay" onClick={() => setSelectedEvent(null)}>
+                    <div
+                        className="modal-overlay"
+                        onClick={() => setSelectedEvent(null)}
+                    >
                         <div
                             className="modal-content"
-                            onClick={(e) => e.stopPropagation()} // Prevent modal close on inner click
+                            onClick={(e) => e.stopPropagation()}
                         >
-                            <button className="close-btn" onClick={() => setSelectedEvent(null)}>
+                            <button
+                                className="close-btn"
+                                onClick={() => setSelectedEvent(null)}
+                            >
                                 &times;
                             </button>
                             <h3>{selectedEvent.title} Gallery</h3>
@@ -267,9 +291,6 @@ const About = () => {
                     </div>
                 )}
             </div>
-
-
-
         </div>
     );
 };

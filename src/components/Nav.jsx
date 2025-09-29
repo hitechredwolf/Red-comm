@@ -66,6 +66,8 @@ function Nav() {
               <li className="nav-item"><Link to="/">Home</Link></li>
               <li className="nav-item"><Link to="/about">About</Link></li>
               <li className="nav-item"><Link to="/blog">Blog</Link></li>
+              <li className="nav-item"><Link to="/television">LED</Link></li>
+              <li className="nav-item"><Link to="/speaker">SPEAKER</Link></li>
               {/* <li className="nav-item"><Link to="/product">Product</Link></li> */}
               <li className="nav-item"><Link to="/contact">Contact</Link></li>
             </ul>
