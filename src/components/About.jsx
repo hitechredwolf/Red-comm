@@ -117,8 +117,8 @@ const About = () => {
     const categories = [
         { title: "Television", img: tvImg, route: "/television" },
         { title: "Soundbar", img: soundbarImg, route: "/speaker" },
-        { title: "Air Conditioner", img: acImg, route: "/airconditioner" },
-        { title: "Washing Machine", img: washingImg, route: "/washingmachine" },
+        { title: "Air Conditioner", img: acImg, route: "/air-conditioner" },
+        { title: "Washing Machine", img: washingImg, route: "/washing-machines" },
     ];
 
     return (
@@ -135,10 +135,8 @@ const About = () => {
                     <div className="card animate-fade-in">
                         <h3>Early Innovation</h3>
                         <p>
-                            We began by addressing a critical gap in mobile EMI management
-                            with the launch of TCOPS Finance Locker, a powerful platform
-                            designed to protect financial assets through secure, scalable
-                            mobile control solutions.
+                            From innovative EMI solutions with T-COPS Finance Locker to cutting-edge Redwolf LED TVs and powerful Redwolf Speakers, we’re redefining technology for modern living.
+                            Our journey is driven by innovation, quality, and a commitment to elevate everyday experiences.
                         </p>
                     </div>
                     <div className="card animate-fade-in">
@@ -215,19 +213,72 @@ const About = () => {
             </section>
 
             {/* Why Redwolf */}
-            <section className="section white-bg">
-                <h2 className="section-title">Why Redwolf?</h2>
-                <ul className="benefits-list">
-                    <li>Boosted EMI recovery for financial partners</li>
-                    <li>Smart, stylish features for home users</li>
-                    <li>Reliable service, innovative engineering</li>
-                </ul>
+            <section className="section why-redwolf">
+                <h2 className="section-title animate-fade-in">Why Choose Red Wolf Info Tech?</h2>
+
+                <p className="intro-text animate-slide-up">
+                    At <strong>Red Wolf Info Tech</strong>, innovation meets reliability. We’re more than
+                    just a technology brand — we’re a forward-thinking company building solutions that
+                    simplify lives, empower businesses, and shape a smarter future.
+                </p>
+
+                <h3 className="trust-title animate-fade-in">Here’s why thousands trust Red Wolf Info Tech:</h3>
+
+                <div className="benefits-grid">
+                    <div className="benefit-card animate-zoom">
+                        <span className="icon">🚀</span>
+                        <h4>Innovation at Core</h4>
+                        <p>
+                            From EMI management through <strong>T-COPS Finance Locker</strong> to next-gen LED TVs,
+                            Speakers, and Electric Vehicles — we design products that redefine performance and
+                            convenience.
+                        </p>
+                    </div>
+
+                    <div className="benefit-card animate-zoom">
+                        <span className="icon">🔒</span>
+                        <h4>Quality You Can Trust</h4>
+                        <p>
+                            Every product we deliver undergoes rigorous testing and meets the highest standards of
+                            safety, durability, and efficiency.
+                        </p>
+                    </div>
+
+                    <div className="benefit-card animate-zoom">
+                        <span className="icon">⚡</span>
+                        <h4>Customer-Centric Approach</h4>
+                        <p>
+                            Our customers are at the heart of everything we do — from product design to after-sales
+                            support, your satisfaction drives our growth.
+                        </p>
+                    </div>
+
+                    <div className="benefit-card animate-zoom">
+                        <span className="icon">🌱</span>
+                        <h4>Sustainability Focused</h4>
+                        <p>
+                            We believe in technology that powers progress without harming the planet. Our
+                            <strong> Red Wolf EV </strong> line stands as proof of that commitment.
+                        </p>
+                    </div>
+
+                    <div className="benefit-card animate-zoom">
+                        <span className="icon">💡</span>
+                        <h4>All-in-One Tech Ecosystem</h4>
+                        <p>
+                            Whether it’s smart electronics, mobility, or financial innovation — Red Wolf Info Tech
+                            connects them all under one powerful brand.
+                        </p>
+                    </div>
+                </div>
+
                 <p className="closing-text animate-slide-up">
-                    At Redwolf Info Tech, we build trust, technology, and tomorrow. From
-                    mobile finance to smart entertainment, we redefine what it means to be
-                    connected. Let’s transform life, together.
+                    At <strong>Red Wolf Info Tech</strong>, we build trust, technology, and tomorrow. From
+                    mobile finance to smart entertainment, we redefine what it means to be connected.
+                    Let’s transform life, together.
                 </p>
             </section>
+
 
             {/* Attributes */}
             <div className="brand-attributes-container">

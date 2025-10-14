@@ -189,3 +189,112 @@
     transform: scale(1.1);
     color: white;
 }
+
+
+/* make in india*/
+
+.makeinindia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 5rem;
+    background: #fff;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+/* LEFT SIDE (Image Section) */
+.makeinindia-left {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.makeinindia-left img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.6s ease-out;
+    will-change: transform;
+}
+
+/* RIGHT SIDE (Text Section) */
+.makeinindia-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: #000;
+    padding-bottom: 5rem;
+}
+
+.india {
+    color: black;
+}
+
+.makeinindia-right h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+}
+
+.makeinindia-right p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.7;
+    max-width: 520px;
+    text-align: center;
+    margin-left: 4rem;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+    .makeinindia {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .makeinindia-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .makeinindia-right h2 {
+        font-size: 1.9rem;
+    }
+
+    .makeinindia-right p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    /* .makeinindia-left img {
+        max-width: 90%;
+    } */
+}
+
+@media (max-width: 600px) {
+    .makeinindia {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .makeinindia-right h2 {
+        font-size: 1.5rem;
+    }
+
+    .makeinindia-right p {
+        font-size: 0.95rem;
+        text-align: center;
+        margin-left: 0rem;
+    }
+}

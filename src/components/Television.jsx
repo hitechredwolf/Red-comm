@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCart } from "./CartContext";
 import { useWishlist } from "./WishlistContext";
+import fastivel from "./images/Festival Electronics Banner.jpg"
 
 const settings = {
   dots: true,
@@ -101,10 +102,14 @@ const Television = () => {
           ))}
         </Slider>
       </div>
-         
-       
 
-       {/* ✅ Back Button */}
+
+      <div>
+        <img src={fastivel} alt="About Banner" className="banner-img" />
+      </div>
+
+
+      {/* ✅ Back Button */}
       <div className="back-btn-wrapper">
         <Link to="/" className="back-btn">⬅ Back</Link>
       </div>
@@ -117,7 +122,7 @@ const Television = () => {
         {showFilters ? "Hide Filters ✖" : "Show Filters ☰"}
       </button>
 
-      
+
 
       {/* ✅ Filters */}
       <aside className={`filters ${showFilters ? "open" : ""}`}>
@@ -187,7 +192,7 @@ const Television = () => {
                       🛒 Add to Cart
                     </button>
                     <button
-                      className="btn wishlist-btn"
+                      className="heart-btn "
                       onClick={() => handleAddToWishlist(tv)}
                     >
                       ❤️

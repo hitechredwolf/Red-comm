@@ -1,7 +1,16 @@
+// src/components/ProductDetail.js
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { televisions } from "./data";
 import "./ProductDetails.css";
+
+// ✅ Cart & Wishlist
+import { useCart } from "./CartContext";
+import { useWishlist } from "./WishlistContext";
+
+// ✅ Toastify
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -13,10 +22,48 @@ const ProductDetail = () => {
     const [quantity, setQuantity] = useState(1);
     const navigate = useNavigate();
 
+    const { cart, addToCart } = useCart();
+    const { wishlist, addToWishlist } = useWishlist();
+
     if (!product) return <h2>Product not found!</h2>;
+
+    // ✅ Add to Wishlist
+    const handleAddToWishlist = () => {
+        const exists = wishlist.find(
+            (item) => item.id === product.id && item.type === "television"
+        );
+        if (exists) {
+            toast.info(`${product.name} is already in your wishlist ⚠️`);
+        } else {
+            addToWishlist({ ...product, type: "television" });
+            toast.success(`${product.name} added to wishlist ❤️`);
+        }
+    };
+
+    // ✅ Add to Cart
+    const handleAddToCart = () => {
+        const exists = cart.find(
+            (item) => item.id === product.id && item.type === "television"
+        );
+        if (exists) {
+            addToCart({ ...product, type: "television", quantity: Number(quantity) });
+            toast.info(`${product.name} quantity updated 🛒`);
+        } else {
+            addToCart({
+                ...product,
+                type: "television",
+                newPrice: product.newPrice,
+                quantity: Number(quantity),
+            });
+            toast.success(`${product.name} added to cart 🛒`);
+        }
+    };
 
     return (
         <div className="details-page">
+            {/* ✅ Toast Container */}
+            <ToastContainer autoClose={2000} hideProgressBar />
+
             {/* Back Button */}
             <div className="back-btn-wrapper">
                 <button onClick={() => navigate(-1)} className="back-btn">
@@ -53,72 +100,24 @@ const ProductDetail = () => {
                         <span className="new-price">₹{product.newPrice}</span>
                     </p>
                     <p className="discount">Save {product.discount}</p>
-                    <p className="emi">
-                        EMI starts at ₹1,309. No Cost EMI available
-                    </p>
-
-                    {/* ✅ Benefits Section */}
-                    <div className="benefits">
-                        <div className="benefit">
-                            <img src="/icons/delivery.png" alt="Free Delivery" />
-                            <p>Free Delivery</p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/replace.png" alt="10 days Replacement" />
-                            <p>
-                                10 days<br />Replacement
-                            </p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/warranty.png" alt="Warranty" />
-                            <p>1 Year Warranty</p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/topbrand.png" alt="Top Brand" />
-                            <p>Top Brand</p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/install.png" alt="Installation" />
-                            <p>Installation</p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/amazon.png" alt="Amazon Delivered" />
-                            <p>Amazon Delivered</p>
-                        </div>
-                        <div className="benefit">
-                            <img src="/icons/secure.png" alt="Secure" />
-                            <p>Secure transaction</p>
-                        </div>
-                    </div>
+                    <p className="emi">EMI starts at ₹1,309. No Cost EMI available</p>
 
                     {/* About Item */}
                     <div className="about-item">
                         <h4>About this item</h4>
+                        {/* ✅ Common paragraph for all LED TVs */}
+                        <p>
+                            Red Wolf LED TV offers an exceptional viewing experience with crisp visuals, vibrant colors, and immersive sound. Designed with a sleek and modern frame, it seamlessly blends with any living space. Equipped with multiple connectivity options and energy-efficient LED technology, it is perfect for watching movies, gaming, and streaming your favorite content. Enjoy reliable performance and smart features for a complete home entertainment solution.
+                        </p>
+
+                        {/* Dynamic Specifications */}
                         <ul>
-                            <li>
-                                HD Ready Display – Sharp and vibrant visuals for an
-                                enhanced viewing experience.
-                            </li>
-                            <li>
-                                Smart Entertainment Hub – Access your favorite apps,
-                                movies, and music with built-in smart features.
-                            </li>
-                            <li>
-                                Slim & Stylish Design – A sleek bezel-less look that
-                                complements any décor.
-                            </li>
-                            <li>
-                                Powerful Audio – Clear and immersive sound for movies,
-                                sports, and gaming.
-                            </li>
-                            <li>
-                                Multiple Connectivity Options – HDMI, USB, Wi-Fi, and
-                                Bluetooth for easy device pairing.
-                            </li>
-                            <li>
-                                Energy Efficient – Advanced LED technology ensures lower
-                                power consumption.
-                            </li>
+                            {product.specifications &&
+                                Object.entries(product.specifications).map(([key, value]) => (
+                                    <li key={key}>
+                                        <b>{key.replace(/([A-Z])/g, " $1")}:</b> {value}
+                                    </li>
+                                ))}
                         </ul>
                     </div>
                 </div>
@@ -169,11 +168,15 @@ const ProductDetail = () => {
 
                     {/* Buttons */}
                     <div className="buttons">
-                        <button className="cart-btn">🛒 Add to Cart</button>
+                        <button className="speaker-cart-btn" onClick={handleAddToCart}>
+                            🛒 Add to Cart
+                        </button>
                         <button className="buy-btn">⚡ Buy Now</button>
                     </div>
 
-                    <button className="wishlist-btn">❤️ Add to Wish List</button>
+                    <button className="wishlist-btn" onClick={handleAddToWishlist}>
+                        ❤️ Add to Wish List
+                    </button>
                 </div>
             </div>
         </div>

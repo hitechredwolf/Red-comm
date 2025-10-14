@@ -1,0 +1,38 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.loading-logo {
+  width: 150px;
+  height: 150px;
+  animation: bounce 2s infinite;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,88 +1,108 @@
-/* Page Base */
+/* ============================
+   🎵 Speaker Details Page
+=============================== */
 .speaker-details-page {
     padding: 20px 15px;
-    background-color: #f4f4f4;
+    background: linear-gradient(180deg, #f9fafc, #f1f3f6);
     min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.7s ease-in-out;
 }
 
-/* Back Button */
+/* 🔙 Back Button */
 .speaker-back-btn-wrapper {
     margin: 10px;
 }
 
 .speaker-back-btn {
-    background-color: #444;
+    background: #444;
     color: #fff;
-    padding: 10px 16px;
+    padding: 10px 18px;
     border-radius: 8px;
     border: none;
     font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .speaker-back-btn:hover {
-    background-color: #222;
+    background: #222;
+    transform: translateX(-3px);
 }
 
-/* 3 Column Layout */
+/* 📦 Grid Layout */
 .speaker-details-grid {
     display: grid;
-    grid-template-columns: 100px 1fr 300px;
-    gap: 20px;
-    max-width: 1200px;
+    grid-template-columns: 100px 1fr 320px;
+    gap: 25px;
+    max-width: 1250px;
     margin: auto;
 }
 
-/* Left Thumbnails */
+/* 🖼️ Left Thumbnails */
 .speaker-left-thumbnails {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .speaker-thumb {
     width: 70px;
     height: 70px;
-    object-fit: contain;
+    object-fit: cover;
     border: 2px solid transparent;
     border-radius: 6px;
     cursor: pointer;
+    transition: transform 0.2s ease, border 0.3s ease;
+}
+
+.speaker-thumb:hover {
+    transform: scale(1.05);
 }
 
 .speaker-thumb.active {
     border-color: #007bff;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
 }
 
-/* Center Info */
+/* 🎯 Center Info */
 .speaker-center-info {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    animation: slideUp 0.6s ease;
 }
 
 .speaker-main-image img {
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
+    border-radius: 10px;
     display: block;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
+    animation: zoomIn 0.8s ease;
 }
 
+/* Product Title */
 .speaker-product-title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #222;
 }
 
 .speaker-rating {
     font-size: 14px;
     color: #ff9900;
+    margin-bottom: 12px;
 }
 
+/* Pricing */
 .speaker-price {
     font-size: 18px;
     font-weight: bold;
+    margin: 8px 0;
 }
 
 .speaker-old-price {
@@ -92,44 +112,68 @@
 }
 
 .speaker-new-price {
-    color: #e60000;
+    color: #07aa27;
     font-size: 20px;
 }
 
 .speaker-discount {
-    color: #2a9d8f;
+    color: #e11414;
     font-weight: 600;
+    margin-top: 6px;
 }
 
 .speaker-emi {
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    color: #444;
 }
 
-/* About Item */
-.speaker-about-item {
-    margin-top: 20px;
-}
-
-.speaker-about-item h4 {
+/* About Product */
+.speaker-about-product h3 {
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
-.speaker-about-item ul {
-    padding-left: 20px;
+.speaker-about-product p {
     font-size: 14px;
+    line-height: 1.6;
+    color: #555;
 }
 
-/* Right Box */
+/* Specifications */
+.speaker-about-item {
+    margin-top: 22px;
+}
+
+.speaker-about-item h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.speaker-about-item ul {
+    padding-left: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.speaker-about-item li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+/* 📦 Right Buy Box */
 .speaker-right-box {
     background: #fff;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 18px;
+    border-radius: 12px;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 20px;
     height: fit-content;
+    animation: slideLeft 0.7s ease;
 }
 
 .speaker-delivery,
@@ -140,6 +184,17 @@
 
 .speaker-warranty h4 {
     margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Quantity */
+.speaker-quantity {
+    margin: 8px 0 14px 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -159,38 +214,180 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .speaker-cart-btn {
-    background-color: #ff9f00;
+    background: linear-gradient(135deg, #28a745, #20c997);
     color: #fff;
 }
 
 .speaker-cart-btn:hover {
-    background-color: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .speaker-buy-btn {
-    background-color: #fb641b;
+    background: #fb641b;
     color: #fff;
 }
 
 .speaker-buy-btn:hover {
-    background-color: #e55a15;
+    background: #e55a15;
+    transform: scale(1.05);
 }
 
 .speaker-wishlist-btn {
+    width: 100%;
     background: #eee;
+    color: #222;
 }
 
-/* Responsive */
+.speaker-wishlist-btn:hover {
+    background: #ddd;
+    transform: scale(1.05);
+}
+
+/* ============================
+   📱 Responsive Design
+=============================== */
 @media (max-width: 992px) {
     .speaker-details-grid {
         grid-template-columns: 1fr;
     }
 
+    .speaker-left-thumbnails {
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .speaker-right-box {
         position: relative;
         top: 0;
+        margin-top: 20px;
     }
+}
+
+@media (max-width: 600px) {
+    .speaker-product-title {
+        font-size: 20px;
+    }
+
+    .speaker-main-image img {
+        max-width: 100%;
+    }
+
+    .speaker-about-product p {
+        font-size: 13px;
+    }
+}
+
+/* ============================
+   ✨ Keyframe Animations
+=============================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Zoom feature styles */
+
+
+
+.speaker-main-image {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.speaker-image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    cursor: crosshair;
+}
+
+.speaker-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.speaker-zoom-lens {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #555;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+.speaker-zoom-result {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+}
+
+.speaker-zoom-result img {
+    width: 800px;
+    height: 800px;
+    object-fit: contain;
+    position: absolute;
 }

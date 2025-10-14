@@ -157,37 +157,156 @@
 /* ============================
    🌟 Why Redwolf
 ============================ */
-.white-bg {
-    background: #fff;
+
+.why-redwolf {
+    background: #ffffff;
+    color: #222;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-.benefits-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    max-width: 700px;
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b30000;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.trust-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    padding: 0 10px;
+}
+
+.benefit-card {
+    background: #f9f9f9;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     text-align: left;
+    max-width: 350px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.benefits-list li {
-    margin: 12px 0;
-    padding-left: 25px;
-    position: relative;
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(179, 0, 0, 0.15);
 }
 
-.benefits-list li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #e63946;
-    font-weight: bold;
+.benefit-card .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefit-card h4 {
+    font-size: 1.2rem;
+    color: #b30000;
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
 }
 
 .closing-text {
-    margin-top: 30px;
-    font-size: 16px;
-    font-style: italic;
+    margin-top: 3rem;
+    font-size: 1.05rem;
+    color: #222;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    font-weight: 500;
 }
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.2s ease forwards;
+}
+
+.animate-zoom {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .intro-text,
+    .closing-text {
+        font-size: 1rem;
+    }
+
+    .benefit-card {
+        max-width: 100%;
+    }
+}
+
 
 /* ============================
    🌟 Brand Attributes

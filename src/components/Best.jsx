@@ -15,14 +15,7 @@ const products = [
         discount: "10% off",
         img: inch32,
     },
-    {
-        id: 2,
-        name: "32-Inch HD Display Frameless Smart LED TV",
-        price: "₹17,680",
-        mrp: "₹21,000",
-        discount: "22% off",
-        img: inch33,
-    },
+
     {
         id: 3,
         name: "Rock & Roll Class D Amplifier",
@@ -30,6 +23,14 @@ const products = [
         mrp: "₹19,900",
         discount: "15% off",
         img: inch34,
+    },
+    {
+        id: 2,
+        name: "32-Inch HD Display Frameless Smart LED TV",
+        price: "₹17,680",
+        mrp: "₹21,000",
+        discount: "22% off",
+        img: inch33,
     },
     {
         id: 4,
@@ -61,8 +62,7 @@ function Best() {
             <div className="apple-header">
                 <h2 className="best">Best of Red Wolf</h2>
                 <p>
-                    Save up to ₹5,000 instantly on eligible products using ICICI & SBI Card
-                    Credit Cards | Exchange bonus upto ₹6,000 on iPhone
+                    Experience the finest from Red Wolf InfoTech – a perfect blend of technology, trust, and innovation. From immersive LED TVs and powerful Speakers to the secure and smart T-Cops Finance Locker, this collection showcases the products our customers love the most. 💯🔥
                 </p>
                 <button className="view-all" onClick={handleViewAll}>View All</button>
             </div>

@@ -67,7 +67,7 @@ function Nav() {
               <li className="nav-item"><Link to="/about">About</Link></li>
               <li className="nav-item"><Link to="/blog">Blog</Link></li>
               <li className="nav-item"><Link to="/television">LED</Link></li>
-              <li className="nav-item"><Link to="/speaker">SPEAKER</Link></li>
+              <li className="nav-item"><Link to="/speaker">Speaker</Link></li>
               {/* <li className="nav-item"><Link to="/product">Product</Link></li> */}
               <li className="nav-item"><Link to="/contact">Contact</Link></li>
             </ul>
@@ -88,10 +88,10 @@ function Nav() {
               <FaShoppingBag className="icon" />
               <span className="cart-count">{cart.length}</span>
             </div>
-
+            {/* 
             <button className="dark-toggle" onClick={toggleDarkMode}>
               {darkMode ? <FaSun /> : <FaMoon />}
-            </button>
+            </button> */}
 
             <button className="menu-toggle" onClick={toggleMenu}>
               {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -106,7 +106,9 @@ function Nav() {
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
             <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
             <li><Link to="/blog" onClick={toggleMenu}>Blog</Link></li>
-            <li><Link to="/product" onClick={toggleMenu}>Product</Link></li>
+            <li><Link to="/television" onClick={toggleMenu}>Led</Link></li>
+            <li><Link to="/speaker" onClick={toggleMenu}>Speaker</Link></li>
+            {/* <li><Link to="/product" onClick={toggleMenu}>Product</Link></li> */}
             <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
           </ul>
         </div>

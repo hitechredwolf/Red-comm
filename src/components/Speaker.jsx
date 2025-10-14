@@ -1,5 +1,5 @@
 // src/components/Speaker.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Speaker.css";
 import Slider from "react-slick";
@@ -148,58 +148,68 @@ function Speaker() {
 
         {/* ✅ Product Grid */}
         <div className="product-grid">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <div className="card-inner">
-                {/* ✅ Card Front */}
-                <div
-                  className="card-front"
-                  onClick={() => navigate(`/speaker/${product.id}`)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <div className="product-image">
-                    <img src={product.image} alt={product.name} />
-                  </div>
-                  <h2 className="hed">{product.name}</h2>
-                  <div className="rating">⭐⭐⭐⭐☆ (120)</div>
-                  <p className="price">₹{product.price}</p>
-                  <p className="off-price">{product.off}</p>
-                </div>
+          {filteredProducts.map((product) => {
+            const originalPrice = Math.round(product.price * 1.2); // 20% higher
+            const discount = "20% off";
 
-                {/* ✅ Card Back */}
-                <div className="card-back">
-                  <button
-                    className="wishlist-icon"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleAddToWishlist(product);
-                    }}
-                  >
-                    ❤️
-                  </button>
-                  <p>
-                    <strong>Category:</strong> {product.category}
-                  </p>
-                  <p>High-quality sound with bass boost.</p>
-                  <button
-                    className="btn add-cart"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleAddToCart(product);
-                    }}
-                  >
-                    🛒 Add to Cart
-                  </button>
-                  <button
-                    className="btn details-btn"
+            return (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  {/* Card Front */}
+                  <div
+                    className="card-front"
                     onClick={() => navigate(`/speaker/${product.id}`)}
+                    style={{ cursor: "pointer" }}
                   >
-                    View Details
-                  </button>
+                    <div className="product-image">
+                      <img src={product.image} alt={product.name} />
+                    </div>
+                    <h2 className="hed">{product.name}</h2>
+                    <div className="rating">⭐⭐⭐⭐☆ (120)</div>
+                    <p className="price">
+                      <span className="original-price">₹{originalPrice}</span>{" "}
+                      <span className="selling-price">₹{product.price}</span>
+                    </p>
+                    <p className="off-price">{discount}</p>
+                  </div>
+
+                  {/* Card Back */}
+                  <div className="card-back">
+                    <button
+                      className="heart-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleAddToWishlist(product);
+                      }}
+                    >
+                      ❤️
+                    </button>
+                    <p>
+                      <strong>Category:</strong> {product.category}
+                    </p>
+                    <p>High-quality sound with bass boost.</p>
+                    <div className="card-buttons">
+                      <button
+                        className="btn add-cart"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleAddToCart(product);
+                        }}
+                      >
+                        🛒 Add to Cart
+                      </button>
+                      <button
+                        className="btn details-btn"
+                        onClick={() => navigate(`/speaker/${product.id}`)}
+                      >
+                        View Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
           {filteredProducts.length === 0 && <p>No speakers found.</p>}
         </div>
